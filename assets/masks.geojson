@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "masks",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "username": "crotona", "lng": -73.895928, "lat": 40.840305, "text": "Crotona Park", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.895928, 40.840305 ] } },
+{ "type": "Feature", "properties": { "username": "bronx", "lng": -73.870746, "lat": 40.861057, "text": "Bronx Park E, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.870746, 40.861057 ] } },
+{ "type": "Feature", "properties": { "username": "pelham", "lng": -73.809184, "lat": 40.865451, "text": "Pelham Bay Park, Middletown Rd, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.809184, 40.865451 ] } },
+{ "type": "Feature", "properties": { "username": "inwood", "lng": -73.915541, "lat": 40.844761, "text": "Inwood Park, West Mount Eden Avenue, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.915541, 40.844761 ] } },
+{ "type": "Feature", "properties": { "username": "soundview", "lng": -73.875044, "lat": 40.817213, "text": "Soundview Park, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.875044, 40.817213 ] } },
+{ "type": "Feature", "properties": { "username": "rose", "lng": -73.890128, "lat": 40.862332, "text": "Rose Hill Park, Webster Avenue, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.890128, 40.862332 ] } },
+{ "type": "Feature", "properties": { "username": "rainey", "lng": -73.897311, "lat": 40.818915, "text": "Bill Rainey Park, Dawson Street, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.897311, 40.818915 ] } },
+{ "type": "Feature", "properties": { "username": "poe", "lng": -73.894637, "lat": 40.865222, "text": "Poe Park Visitor Center, Grand Concourse, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.894637, 40.865222 ] } },
+{ "type": "Feature", "properties": { "username": "mary", "lng": -73.911896, "lat": 40.811893, "text": "St. Mary's Park, Saint Ann's Avenue, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.911896, 40.811893 ] } },
+{ "type": "Feature", "properties": { "username": "mullaly", "lng": -73.924593, "lat": 40.833025, "text": "Mullaly Park, Jerome Avenue, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.924593, 40.833025 ] } },
+{ "type": "Feature", "properties": { "username": "captain", "lng": -73.910676, "lat": 40.855096, "text": "Captain Roscoe Brown, Ph.D. Plaza, West 180th Street, The Bronx, NY", "field_5": null, "field_6": null, "field_7": null, "field_8": null, "field_9": null }, "geometry": { "type": "Point", "coordinates": [ -73.910676, 40.855096 ] } }
+]
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--meta data for sharing links on Facebook-->
-    <meta property="og:title" content="New York Towards New Normal"/>
+    <meta property="og:title" content="Resilience New York"/>
     <meta property="og:url" content="http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"/>
     <meta property="og:description" content="Resilience Storymap."/>
     <meta property="og:image" content="../../img/social.png"/>
@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <!--add favicon for the web page-->
-    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- add a favicon of NY big apple from website https://favicon.io/favicon-converter/-->
 
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
@@ -30,7 +31,6 @@
     <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
 
     <!--add required libraries-->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -44,117 +44,125 @@
     <!--mini globle map-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
-    <script src="../../js/globeminimap.js"></script>
+    <script src="js/Control.GlobeMiniMap.js"></script>
 
     <!--story map plugin-->
     <script src="js/storymap.2.5.js"></script>
 </head>
 <body>
 
-<div id="storymap" class="container-fluid">
-
 <!--Navigations,container,and button -->
-<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-<div class="container-fluid">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="description.html">Description</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="New-York.png">
+   <img src="img/New-York.png" alt="Logo" style="width:35px;">NYS</a>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="description.html">Description</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 </nav>
-
+<!-- Create Storymap -->
+<div id="storymap" class="container-fluid">
     <div class="row">
         <div class="col-sm-6 col-md-4 storymap-story">
-            <section data-scene="overview" data-background="img/nyvintage.mp4">
+
+            <section data-scene="intro" data-background="img/nyvintage.mp4">
                 <div class="fullscreen text-center">
-
                     <h1 class="display-4 d-flex justify-content-center">Resilience Story of New York</h1>
-
                     <strong class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">This is the resilience story of New York State
                       in the face of COVID-19 pandemic
                     </strong>
                 </div>
             </section>
-            <section data-scene="newyork" style="background-color:black; color:white;">
+            <section data-scene="income" style="background-color:black; color:white;">
                 <h2><b>396-Year Old New York</b></h2>
-                <p>New York was a colony of the Dutch who settled along the Hudson River in 1624 under the name of New Amsterdam. The reign of
-                British Empire 40 years later changed the history of the state as well as its name into New York. The New York State had significant
-                role in the American Revolution and been a magnet for immigrants to work and settle. New York City is the largest city in the state,
-                a home for almost 20 million people and the center of international economy via its New York Stock Exchange.</p>
+                <p>New York was once named New Amsterdam, given by the Dutch who colonized this area along the Hudson River in 1624. It is under the reign of
+                British Empire 40 years later that the name turned into New York. The New York State had significant role in American Revolution and long been a
+                magnet for immigrants worldwide to work and reside. New York City is the largest city in the state and a home for nearly 20 million people.</p>
                 <img src="img/NYC_vintage.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Old New York">
                 <p style="text-align:center;"><a href="https://untappedcities.com/2016/06/24/lost-in-old-new-york-vintage-photos-from-the-museum-of-the-city-of-new-york/">Countesy of MCNY</a></p>
                 <br>
-                <h2><b>I Love New York</b></h2>
-                <p>The state has 62 counties which are divided into about 1,500 towns and villages. Unlike other states in which either town or county government is relatively weak, New Yowk has a strong governance.
-                xpecial districts include port and bridge, health, and regional market authorities. The Port Authority is one of the largest special districts
-                operating harbors and related facilities throughout New York City and New Jersey.</p>
+                <p>The state has 62 counties which are divided into about 1,500 towns and villages. Compared to other county governments, New Yowk relatively has a stronger governance with
+                  many special districts and infrastructures like port, bridge, health, and regional market. The Port Authority is one of the largest special districts operating harbors and related facilities throughout New York City and New Jersey.</p>
+                <img src="img/NYC_night2.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image"alt-text="NYC at midgnight">
+                <p style="text-align:center;"><a href="https://www.pinterest.com/pin/171629435785355627">Countesy of PhotoMagazine</a></p>
+                <br>
+                <p>Being one of the wealthiest states in the USA does not mean that New York State does not struggle with issue of homelessness and poverty.
+                  Leading the nation with the greatest divide between the wealthiest 1 percent of residents and the other 99 percent was New York state, according to the report by the Economic Policy Institute, a left-leaning think tank in Washington, D.C.
+                  The average income of the top 1 percent in New York state was $2.2 million in 2015, while the average income of the bottom 99 percent was $49,617. The economy inequity is also associated with ethnicity and race. The map shows the Median
+                  household income level throughout the U.S. states in 2020.</p>
                 <img src="img/NYC_night2.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image"alt-text="NYC at midgnight">
                 <p style="text-align:center;"><a href="https://www.pinterest.com/pin/171629435785355627">Countesy of PhotoMagazine</a></p>
             </section>
 
-            <section data-scene="dilema" style="background-color:black; color:white;">
-              <h2><b>21st Century Dark Age</b></h2>
+            <section data-scene="cases" style="background-color:black; color:white;" >
+              <h2><b>New York Today</b></h2>
               <p>The coronavirus spread in the U.S. since March 2020 had drastically changed the way people live their lives. New York, specifically the NYC is the epicenter of the Pandemic in the U.S.
-              Today, the confirmed cases has reached about ..... and .... deaths. Compared to other states, the rapid spread of the virus in NY clearly signaled an urgent call of taking extreme measures, similar
-              to what China and South Korea had done: lockdown and social distancing </p>
+              Until May 15, 2020, the confirmed cases in New York State has reached about ..... and .... deaths. Compared to other states, the rapid spread of the virus in NY clearly signaled an urgent call of taking extreme measures, similar
+              to what China and South Korea had done: lockdown and social distancing The independent expert maintained that people in poverty are disproportionately threatened by the coronavirus.
+              “They are more likely to work in jobs with a high risk of exposure, live in crowded and insecure housing, reside in neighbourhoods that are more vulnerable because of air pollution,
+              and lack access to healthcare”, he said.“Communities of colour, who face a persistent racial wealth gap, are at particular risk and are dying at much higher rates.”
+              Additionally, the poor have fewer resources to cushion economic blows and are more susceptible to mass layoffs and pay cuts. </p>
               <img src="img/NYC_compare.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Compared to other states">
+              <p style="text-align:center;"><a href="https://untappedcities.com/2016/06/24/lost-in-old-new-york-vintage-photos-from-the-museum-of-the-city-of-new-york/">Countesy of MCNY</a></p>
               <br>
-              <h2><b>Trapped</b></h2>
-              <p>New York is .</p>
-              <img src="img/NYC_corona.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Stucked with Coronavirus">
-              <p>New York</p>
-              <h2><b>Dilemmatic Physical Distancing</b></h2>
-              <p>Twitter .</p>
-              <img src="assets/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Stucked with Coronavirus">
+              <p>The fines for people not allowing the governor's executive order was between $500 and $ 1,000. The New York Governor stated that people did not take the order serioulsly</p>
+              <img src="img/covid_patient.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Stucked with Coronavirus">
+              <p style="text-align:center;"><a href="https://untappedcities.com/2016/06/24/lost-in-old-new-york-vintage-photos-from-the-museum-of-the-city-of-new-york/">Countesy of MCNY</a></p>
+              <p>People shared their personal stories in the face of the pandemic and asked one to another: "What's Your Quarantine Routine?" Others expressed their feelings through sketches.</p>
+              <img src="img/NYC_Adinatudor_sketch.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Stucked with Coronavirus">
+              <p style="text-align:center;"><a href="https://untappedcities.com/2016/06/24/lost-in-old-new-york-vintage-photos-from-the-museum-of-the-city-of-new-york/">Countesy of MCNY</a></p>
             </section>
 
-            <section data-scene="outrage" style="background-color:black; color:white;">
-                <h2><b>The Outrage</b></h2>
+            <section data-scene="distancing" style="background-color:black; color:white;">
+                <h2><b>Social Distancing</b></h2>
                 <p>people got angry.</p>
                 <img src="img/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="outrage">
                 <br>
-                <h2><b>Government's Reactions</b></h2>
-                <p>Farmer market, facial mask for the frontliners.</p>
-                <img src="img/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="government">
             </section>
 
-            <section data-scene="heroism" style="background-color:black; color:white;">
-                <h2><b>Food Pantry and Shelters</b></h2>
-                <p>People are called to volunteer in this difficult and uncertain condition in New York. Take Queens Village as the example. Through the Hunter College NYC Food
-                Policy Center, this Village provided millions of New Yorkers with free food and meals for their survival. Surprisingly, the pantry itself has relied on retired seniors
-                in its operation. Since they can no longer safely leave their homes, the food pantry and kitchen are today run by young volunteers.
+            <section data-scene="usaguns" style="background-color:black; color:white;">
+                <h2><b>Outrage</b></h2>
+                <p>people got angry.</p>
+                <img src="img/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="outrage">
+                <br>
+            </section>
+
+            <section data-scene="food" style="background-color:black; color:white;">
+                <h2><b>Solidarity</b></h2>
+                <p>People are called to volunteer in this difficult and uncertain condition in New York. The map shows some of almost 150 food pantries that voluntarily provides
+                  people with free food during the pandemic. Most of the pantries are organized by church and ethnicity-based institutions, and surprisingly, relied on retired seniors.
+                  Since they can no longer safely leave their homes, the food pantry and kitchen are today run by young volunteers.
               </p>
                 <img src="img/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="farmer">
-                <p>The interactive map shows us the distribution of each food pantry organized by the Hunter College NYC Policy Center. There are 21 food pantries organized by different
-                church in this state and Village. Beside foods, many organizations are now opening their doors to welcome the homeless by providing them with shelters, transitional housing
-                and services without exemption. These organizations normally required the homeless people to show their ID or proof of residence. One of these organizations is located on Winchester Blvd.</p>
-                <h2><b>Environment</b></h2>
-                <p>The quality of our environment .</p>
-                <img src="img/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="environment">
-                <p>....</p>
+                <p>Besides foods, many organizations are now opening their doors to welcome homeless by providing them with shelters, transitional housing
+                and services. These organizations normally required the homeless people to show their ID or proof of residence. One of these organizations is located on Winchester Blvd.</p>
+                <img src="img/NYC_covid.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="farmer">
+                <p>Medical staff who </p>
             </section>
 
-            <section data-scene="resilience" style="background-color:black; color:white;">
-                <h2><b>Changing the Mindset</b></h2>
+            <section data-scene="resilience">
+                <h2><b>Work Together</b></h2>
                 <p>Resilience.</p>
-                <img src="../../img/oregon_flag.png" class="img-responsive img-thumbnail" alt="responsive image"
+                <img src="img/NY_worktogether.jpg" class="img-responsive img-thumbnail" alt="responsive image"
                      alt-text="change the mindset">
                 <p>Then, ...</p>
             </section>
 
-            <section data-scene="end" data-background="assets/end.jpg">
+            <section data-scene="end" data-background="img/NY_worktogether.jpg">
                 <div class="fullscreen text-center">
                     <h1 class="display-4 d-flex justify-content-center">Let's Embrace the New Normal</h1>
                     <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">Your
@@ -195,19 +203,11 @@
                     <h4 class="modal-title">About</h4>
                 </div>
                 <div class="modal-body">
-                    <p>This is a web map of major cities in Oregon. It is mainly made as a demo for a course GEOG 371:
-                        Web Mapping provided by Oregon State University. The story map library is derived from the
-                        storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality
-                        relies on both leaflet and Boostrap.</p>
+                    <p>This is a web map of resilience story of New York, which is a part of final project of GEOG 458
+                      at the University of Washington,Seattle</p>
                     <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
-                    <p><b>Author: Bo Zhao</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University
+                    <p><b>Author: Catharina Depari</b> | University of Washington | Seattle
                     </p>
-                    <p>The context about Oregon cities was collected from Wikipedia.</p>
-                    <p>The <a href="https://www.youtube.com/watch?v=UJ_vQC9PNY4">background video</a> on the front page
-                        was clipped from Youtube. </p>
-                    <p>The favicon image was acquired from <a>http://www.udlcenter.org/advocacy/state/oregon.</a></p>
-                    <p>This story map uses geospatial data from mapbox, Google Earth Engine, ESRI Map, Open Street Maps
-                        and Oregon Explorer.</p>
                 </div>
             </div>
         </div>
@@ -216,6 +216,7 @@
 
 <!-- main javascript -->
 <script type="text/javascript">
+
 
     // Build up a set of colors from chroma category for Covid-19 cases in NYS
     var colors = chroma.scale(['lightyellow', 'darkred']).mode('lch').colors(7);
@@ -242,8 +243,8 @@
           };
       }
     // Create Legend Contents in html format
-    var newyork_legend = L.control({position: 'topright'});
-    newyork_legend.onAdd = function () {
+    var cases_legend = L.control({position: 'topright'});
+    cases_legend.onAdd = function () {
         // Create Div Element and Populate it with HTML
         var div = L.DomUtil.create('div', 'newyork_legend');
         div.innerHTML += '<b>Confirmed Cases</b><br />';
@@ -256,11 +257,12 @@
         div.innerHTML += '<i style="background: ' + colors[0] + '; opacity: 0.3"></i><p><100</p>';
         return div;
       };
-    var tiles_legend = '<i style="background:red ; opacity: 0.5"></i><p><b>Cases</b></p>';
-    var dilema_legend = '<i style="background: lightblue; opacity: 0.5"></i><p><b>Tweets</b></p>';
-    var outrage_legend = '<i style="background: white; opacity: 0.5"></i><p><b>Income Level</b></p>';
-    var heroism_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Food Pantry</b></p>';
-    var resilience_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Forest</b></p>';
+    var income_legend = '<i style="background:red ; opacity: 0.5"></i><p><b>income level</b></p>';
+    var distancing_legend = '<i style="background: lightblue; opacity: 0.5"></i><p><b>social distancing</b></p>';
+    var food_legend = '<i style="background: white; opacity: 0.5"></i><p><b>food pantry</b></p>';
+    var usaguns_legend = '<i style="background: green; opacity: 0.5"></i><p><b>crime level</b></p>';
+    var resilience_legend = '<i style="background: green; opacity: 0.5"></i><p><b>change mindset</b></p>';
+    var cases1_legend = '<i style="background: green; opacity: 0.5"></i><p><b>change mindset</b></p>';
 
     // Collect coordinates of voluntary-based food pantries in NY State
     var agatha = L.marker([40.902705, -73.840120]).bindPopup('Agatha House Foundation-Mobile Pantry'),
@@ -299,95 +301,146 @@
     our = L.marker([40.631949, -74.087140]).bindPopup('Our Lady of Good Counsel Church'),
     ame = L.marker([40.588906, -73.804645]).bindPopup('Bethel AME Church');
 
-    // var pantry = L.layerGroup([agatha, newlife,frances,grace,bethany, iglesia, gospel, shiloh,luke, aids, bravo, solution, sda,forsaken, missionary, jewish, baptist, paul,family,spanish,
-    //   sound,sheep, west, living, bright, act, lady, kings,salt, masbia, salvation, project, staten, our, ame]);
 
     var layers = {
-      tiles: {
-            layer: L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-                maxZoom: 7,
-                tms: true,
-                attribution: 'Generated by QMetaTiles',
-                detectRetina: true,
-            }),
-          },
-      NY: {
-        layer: L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png')},
-          cases: {
-            layer: L.geoJson.ajax('assets/nycases.geojson', {
-              style: style,
-              onEachFeature: function (feature, layer) {
-                layer.bindPopup("<h6>county:</h6>" + feature.properties.NAME + " " +"<h6>cases:</h6>" + feature.properties.cases + " " + "<h6>population:</h6>" + feature.properties.POP2010 + "" + "<h6>tested:</h6>" + feature.properties.test);
-              }
-            }), legend: newyork_legend
-          },
-      SD: {layer: L.tileLayer('assets/tiles/{z}/{x}/{y}.png')},
-         dilema: {
-             layer: L.geoJson.ajax('assets/twitter_socdis.geojson', {
-                 color: 'orange',
-                 weight: 2,
-                 opacity: 0.3
-             }), legend: dilema_legend
-           },
-       POV: {layer: L.tileLayer('assets/tiles/{z}/{x}/{y}.png')},
-        out: {
-            layer: L.geoJson.ajax('assets/nymedinco.geojson', {
-              style: style,
-              onEachFeature: function (feature, layer) {
-                layer.bindPopup("<h6><b>County:</b></h6>" + feature.properties.NAME + " " +"<h6><b>Median Household Income ($):</b></h6>" + feature.properties.nystatepoverty_medinco);
-              }
-            }), legend: outrage_legend
-          },
-        PANT: {
-          layer: L.layerGroup([agatha, newlife,frances,grace,bethany, iglesia, gospel, shiloh,luke, aids, bravo, solution, sda,forsaken, missionary, jewish, baptist, paul,family,spanish,
-            sound,sheep, west, living, bright, act, lady, kings,salt, masbia, salvation, project, staten, our, ame])
+      NY: {layer: L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
+        tms: true,
+        attribution: "Generated by QTiles",
+        detectRetina: true,
+        tiled: true,
+        maxZoom: 14,
+        minZoom: 0,
+        continuousWorld: true
+      }),
+    },
+    income: {
+      layer: L.geoJson.ajax('assets/nymedinco.geojson', {
+        style: style,
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup("<h6><b>County:</b></h6>" + feature.properties.NAME + " " +"<h6><b>Median Household Income ($):</b></h6>" + feature.properties.nystatepoverty_medinco);
+        }
+      }), legend: income_legend
+    },
+    cases: {
+      layer: L.geoJson.ajax('assets/nycases.geojson', {
+        tms: true,
+        attribution: "Generated by QTiles",
+        detectRetina: true,
+        tiled: true,
+        maxZoom: 12,
+        continuousWorld: true,
+        style: style,
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup("<h6>county:</h6>" + feature.properties.NAME + " " +"<h6>cases:</h6>" + feature.properties.cases + " " + "<h6>population:</h6>" + feature.properties.POP2010 + "" + "<h6>tested:</h6>" + feature.properties.test);
+        }
+      }), legend: cases_legend
+    },
+//START HERE
+    // cases1: {
+    //   layer: L.geoJson.ajax('assets/nycases.geojson', {
+    //     onEachFeature: function (feature, layer) {
+    //       layer.bindPopup("p><b>" + feature.properties.NAME + " " +"<p><b>" + feature.properties.cases + "</b></p>",
+    //     {sticky: false, className: "feature-label", permanent: false, offset: [-1, -1]});
+    //   },
+    //   color: 'deepskyblue',
+    //   weight: 2,
+    //   opacity: 0.3
+    //   }), legend: cases1_legend
+    // },
+//ISSUE HERE, CREATE STRINGDATA FIRST
+    income1: {
+    layer: L.geoJson.ajax('assets/nysmedian.geojson', {
+     onEachFeature: function (feature, layer) {
+    layer.bindPopup(feature.properties.nysmedian_mhi),
+    {sticky: true, className: "feature-label", permanent: false, direction: "center"};
+     },
+    pointToLayer: function (feature, latlng) {
+    var id = 0;
+    if (feature.properties.nysmedian_mhi == "<1700") { id = 0; }
+    else if (feature.properties.nysmedian_mhi == "1700-2500") { id = 1; }
+    else if (feature.properties.nysmedian_mhi == "2500-3300") { id = 2; }
+    else if (feature.properties.nysmedian_mhi == "3300-4100") { id = 3; }
+    else { id = 4; } // >$4100 median household income
+    return L.marker(latlng, {icon: L.divIcon({className: 'fa fa-city marker-color-' + (id + 1).toString() }) });
         },
+        color: '#ff3831',
+        weight: 15,
+        opacity: 0.1
+      }),
+    },
+//END HERE
+    distancing: {
+      layer: L.geoJson.ajax('assets/tweets.geojson', {
+        //marker
+        weight: 2,
+        opacity: 0.3
+      }), legend: distancing_legend
+    },
 
-        GEE: {
-            layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'),
-            legend: resilience_legend
-        },
+    food: {
+      layer: L.layerGroup([agatha, newlife,frances,grace,bethany, iglesia, gospel, shiloh,luke, aids, bravo, solution, sda,forsaken, missionary, jewish, baptist, paul,family,spanish,
+        sound,sheep, west, living, bright, act, lady, kings,salt, masbia, salvation, project, staten, our, ame]) // markers with icon
+      },
 
-        satellite: {
-            layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
-                id: 'mapbox.satellite'
-            })
-        },
+    usaguns: {
+      layer: L.geoJson.ajax('assets/usaguns.geojson', {
+        style: style,
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup("<h6><b>County:</b></h6>" + feature.properties.name + " " +"<h6><b>Registered Guns:</b></h6>" + feature.properties.reg);
+        }
+      }), legend: usaguns_legend
+    },
 
-        mb1: {
-            layer: L.tileLayer('https://styles/mapbox/dark-v10/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2F0aGFyaW5hZGVwYXJpIiwiYSI6ImNrOXZ5ZGhyMDAxcngzZGxlbTkzamtuYjcifQ.y2t_yfvkZi3_Uvk8VAg4sA', {
-                id: 'mapbox.dark'
-            })
-        },
+    tiles: {
+      layer: L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
+        tms: true,
+        attribution: 'Generated by QMetaTiles',
+        detectRetina: true,
+        tiled: true,
+        maxZoom: 14,
+        minZoom: 0,
+        continuousWorld: true
+      }),
+    },
 
-        // antique: {
-        //   layer: L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-antique/{z}/{x}/{y}.png')}
-        // },
-
-        basemap: {
-          layer: L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png')}
-        };
-
-    // var control = {
-    //   function ()
-    // }
-
+    GEE: {
+      layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'),
+      legend: resilience_legend
+    },
+    satellite: {
+      layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+        id: 'mapbox.satellite'
+      })
+    },
+    mb1: {
+      layer: L.tileLayer('https://styles/mapbox/dark-v10/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2F0aGFyaW5hZGVwYXJpIiwiYSI6ImNrOXZ5ZGhyMDAxcngzZGxlbTkzamtuYjcifQ.y2t_yfvkZi3_Uvk8VAg4sA', {
+        id: 'mapbox.dark'
+      })
+    },
+  cartodb_light: {
+    layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+      attribution: "Generated by QTiles",
+      detectRetina: true,
+      tileSize: 512,
+      zoomOffset: -1
+    })
+  }
+};
 
     var scenes = {
-        overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
-        newyork: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'I Love New York', layers: [layers.tiles, layers.cases]}, // cases geojson, scale : NYS
-        dilema: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'Social Distancing', layers: [layers.dilema]}, //twitter geojson with marker, scale: NYS
-        outrage: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'Outrage', layers: [layers.out]}, // poverty, gunfires/protest in US states geojson, scale: NYS
-        heroism: {lat:40.848, lng: -73.864, zoom: 8, name: 'Social Cohesion', layers: [layers.PANT]}, // food pantries for 3d map markers, scale: NYS
-        resilience: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'Changing the Mindset', layers: [layers.antique]}, // environment
+        intro: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
+        income: {lat:42.541, lng: -75.291, zoom: 6.5, maxZoom: 14, minZoom: 2, name: 'I Love New York', layers: [layers.income1, layers.cartodb_light]}, // income level, scale : NYS
+        cases: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'Social Distancing', layers: [layers.cases1, layers.cartodb_light]}, //cases of covid, scale: NYS
+        distancing: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'Tweeter', layers: [layers.tweets, layers.cartodb_light]}, //tweets scale: NYS
+        usaguns: {lat:39.38, lng: -97.92, zoom: 3, name: 'Changing the Mindset', layers: [layers.usaguns, layers.cartodb_light]}, // protests, USA
+        food: {lat:40.848, lng: -73.864, zoom: 12.5, name: 'Social Cohesion', layers: [layers.food, layers.cases1, layers.cartodb_light]}, // food, scale: NYS
+        resilience: {lat:40.848, lng: -73.864, zoom: 12.5, name: 'Changing the Mindset', layers: [layers.GEE]}, // environment
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'New Normal'}
     };
 
-    L.control.layers({'Basemap':layers.basemap},{'tiles':layers.cases});
-
     $('#storymap').storymap({
         scenes: scenes,
-        baselayer: layers.basemap,
+        baselayer: layers.cartodb_light,
         legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
         credits: "",
         loader: true,
@@ -401,15 +454,21 @@
         createMap: function () {
             // create a map in the "map" div, set the view to a given place and zoom
             var map = L.map($(".storymap-map")[0], {
-                zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
+                zoomControl: false,
+                scrollWheelZoom: false,
+                fadeAnimation: true,
                 zoomAnimation: true
-            }).setView([44, -120], 7);
-            basemap = this.baselayer.layer.addTo(map)
-            //add an miniglobe
-            // new L.Control.GlobeMiniMap({
-            //   marker: 'red',
-            //   position: 'bottomright'
-            // }).addTo(map);
+            }).setView([42.541, -75.291], 7);
+
+            // add an miniglobe
+            var miniglobe = new L.Control.GlobeMiniMap({
+              marker: 'red',
+              position: 'bottomright',
+              topojsonSrc: 'js/world.json',
+              attribution: 'Chris Whong'
+              // https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html
+            }).addTo(map);
+
             return map;
         }
     });
