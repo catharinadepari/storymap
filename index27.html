@@ -107,7 +107,6 @@
               <p style="text-align:center;"><a href="https://www.nytimes.com/2020/03/30/us/coronavirus-world-news-updates.html">Countesy of NY Times</a></p>
             </section>
 
-
             <section data-scene="order" style="background-color:white; color:black;">
                 <h2><b>Government's Pause Order</b></h2>
                 <p>On march 22, 2020, Governor Cuomo announced the New York State on PAUSE executive order which consists of 10-point policies to prevent the spread. The maximum fine of
@@ -310,6 +309,7 @@
       }),
     },
 
+
     outrage: {
       layer: L.geoJson.ajax('assets/nys_viol_rate.geojson', {
         style: function(feature) {
@@ -428,8 +428,8 @@
         overview: {lat:42.541, lng: -75.291, zoom: 7, name: 'overview', layers: []},
         cases: {lat:42.541, lng: -75.291, zoom: 3, name: 'cases', layers: [layers.cases]}, //cases of covid, scale: US
         order: {lat:42.541, lng: -75.291, zoom: 3, name: 'distancing', layers: [layers.cases, layers.order]}, //tweets scale: NYS
-        poverty: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'income', layers: [layers.poverty]}, // income level, scale : NYS
         outrage: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'violence', layers: [layers.outrage]}, // protests, USA
+        poverty: {lat:42.541, lng: -75.291, zoom: 6.5, name: 'income', layers: [layers.poverty]}, // income level, scale : NYS
         volunteer: {lat:40.848, lng: -73.864, zoom: 12.5, name: 'food', layers: [layers.volunteer, layers.mask, layers.poverty]}, // food, scale: Bronx, NYC
         embrace: {lat:42.541, lng: -75.291, zoom: 7, name: 'embrace'},
         end: {lat:42.541, lng: -75.291, zoom: 7, name: 'end'}
@@ -440,12 +440,13 @@
         layers: layers,
         baselayer: layers.cartodb_light,
         legend: true,
+        navbar: true,
         credits: "",
         loader: true,
         legend: true,
         scalebar: false,
-        flyo: true,
         scrolldown: true,
+        flyo: true,
         progressline: true,
         navwidget: true,
 
@@ -454,8 +455,9 @@
               center: [50,10],
               zoom: 15,
               maxZoom: 18,
-              attributionControl: true,
+              attributionControl: false,
               zoomControl: true,
+              scrollWheelZoom: true,
               doubleClickZoom: true,
               dragging: true,
               animate: true,
@@ -466,13 +468,34 @@
             }).setView([40.80312772327861, -74.25052800770425], 2.5);
 
             // Enable scrollWheelZoom only if the user hasn't scrolled the page in 1000 milliseconds
-            document.addEventListener("scroll", function() {
-              map.scrollWheelZoom.enable()
-              var timeOut = null;
-              if (timeOut != null) {
-                clearTimeout(timeOut);
-              }timeOut = setTimeout("map.scrollWheelZoom.enable()", 1000);
+            // document.addEventListener("scroll", function() {
+            // map.scrollWheelZoom.enable()
+            //   var timeOut = null;
+            //   if (timeOut != null) {
+            //     clearTimeout(timeOut);
+            //   }timeOut = setTimeout("map.scrollWheelZoom.enable()", 1000);
+            // });
+
+            map.on('click', function() {
+              if (map.scrollWheelZoom.enabled()) {
+                map.scrollWheelZoom.disable();
+              }
+              else {
+                map.scrollWheelZoom.enable();
+              }
             });
+
+            //try 3d
+            // var osmb = new OSMBuildings(map).setData(nypo.geojson);
+            // L.control.layers({}, { Buildings:osmb }).addTo(map)
+            // osmb.setStyle({
+            //   wallColor:'rgba(100, 100, 250, 0.701961)',
+            //   roofColor:'rgb(220, 220, 50)',
+            //   shadows:true
+            // });
+            //
+            // osmb.setDate(new Date(2014, 3, 24, 13, 0));
+            //to here
 
             // add an miniglobe
             var miniglobe = new L.Control.GlobeMiniMap({
