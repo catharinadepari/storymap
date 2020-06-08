@@ -81,17 +81,17 @@ cartodb_dark: {
 ```
 The miniglobe added to the storymap was retrieved from Chris Whong's leaflet example in the github with URL: https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html.
 
-#### B. Critiques on the UI/UX<br>
+### :lock_with_ink_pen: Guides for Users
 The **`User Interface`** and **`User Experience`** Designs are two crucial components of a storymap. The User Experience (UX) relates with elements that are used to effectively influence users' experience, perceptions, and easiness in accessing the web map. The UI design  focuses on the appearance, presentation, and interactivity of the web map with user. For these two components, I used the following techniques and codes: <br>
 
 - retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4.png" width='900'><br>
-- zooming in and zooming out the map with accordance to their needs with **zoom control** and **animated zoom** that takes users to **fly to** Bronx and New York cities<br><img src="img/pg8.png" width='900'><br>
-- navigating pages through **animated arrow** and returning to the first page by clicking home icon on the last page of the storymap<br><img src="img/pg1.png" width='900'><br>
-- links to sources about the history and present time of New York State, and future resilient city that miht inspire New York State.<br><img src="img/pg2.png" width='900'><br><br>
-- links to facebook, github, and brief information about the storymap.<br><img src="img/pg3.png" width='900'><br><br>
+- zooming in and zooming out the map with accordance to their needs through **zoom control** and flying to areas of concern: Bronx and New York cities through **animated zoom** <br><img src="img/pg8.png" width='900'><br>
+- navigating pages through **animated arrow** and returning to the first page by clicking **home icon** on the last page of the storymap<br><img src="img/pg1.png" width='900'><br>
+- having **links** to sources about the history and present time of New York State, and future resilient city that might inspire New York State.<br><img src="img/pg2.png" width='900'><br><br>
+- having **links** to facebook, github, and brief information about the storymap.<br><img src="img/pg3.png" width='900'><br><br>
 
 ## :flags: Credits/Acknowledgement
-This storymap is possible to be developed due to the contributions of following institutons, organizations and individuals:
+This storymap is possible to be developed due to the contributions of following institutons, organizations, and individuals:
 - New York State Government for its open source database that allows the storymap to be developed
 - U.S. Center of Disease Control and Prevention for providing recent data of COVID-19 cases in the U.S.
 - Taylor DesOrmeau for article *What’s the difference between Michigan’s stay-at-home order and state of emergency?* in the [mlive.com](https://www.mlive.com/public-interest/2020/04/whats-the-difference-between-michigans-stay-at-home-order-and-state-of-emergency.html)
