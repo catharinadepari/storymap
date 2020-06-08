@@ -30,14 +30,13 @@ This storymap used data that are compiled from various and reliable resources be
 The technique can be seen from the screenshot below.
 <br>
 
-<img src="img/coordinates.png" align: 'center' width='500'>
+<p><img src="img/coordinates.png" align: 'center' width='500'></p>
 <br>
 
 For further details, I provide the storyline of this web map in the form of hand-sketch.
 <br>
 <img src="img/coordinates.png" width='500'>
 <br>
-
 
 | Data file | Data Type | Description| Sources |
 | --------- | --------- | ---------- | ------- |
