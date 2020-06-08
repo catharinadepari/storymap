@@ -81,7 +81,7 @@ cartodb_dark: {
 ```
 The miniglobe added to the storymap was retrieved from Chris Whong's leaflet example in the github with URL: https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html.
 
-### :lock_with_ink_pen: Guides for Users
+## :lock_with_ink_pen: Guides for Users
 The **`User Interface`** and **`User Experience`** Designs are two crucial components of a storymap. The User Experience (UX) relates with elements that are used to effectively influence users' experience, perceptions, and easiness in accessing the web map. The UI design  focuses on the appearance, presentation, and interactivity of the web map with user. For these two components, I used the following techniques and codes: <br>
 
 - retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4.png" width='900'><br>
