@@ -14,13 +14,13 @@ In the web map process, I primarily developed the storyline by referring to the 
 
 The 3 narrative elements of this web map include:
 <br>
-1. **SET-UP ACT**<br>
-In terms of **`settings`**, the locus of this storymap is **New York State** that comprises 62 couunties. The **`key characters`** invoved are the citizens of the **New York State** and the **Governor Andrew Cuomo**. The **problem** is the pandemic that disrupts the lives of people in the New York State and associated policy issued by Governor Cuomo that then raised public outrage and protests. The **time frame** is the current time where the pandemic and pause order are still taking place.<br>
+1. **Set-Up Act**<br>
+In terms of **`settings`**, the locus of this storymap is **New York State** that comprises 62 counties. The **`key characters`** involved are the citizens of the **New York State** and the **Governor Andrew Cuomo**. The **problem** is the pandemic that disrupts the lives of people in the New York State along with Governor's pause order that  raised public outrage and protests. The **time frame** is the current time where the pandemic and pause order are still taking place.<br>
 
 <img src="img/pg5.png" width='900'><br>
 
 2. **Conflict Act**<br>
-The **`key issue`** of the story is the **vulnerability of people in New York State to the pandemic increases as poverty and violance firearm rates in this state are relatively higher than other states in the U.S**. To convince users, I provided thematic spatial maps (i.e., COVID-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in sequential and systematic/linear order. The purpose is to show the link between these themes or factors and the concentration of the issues on specific areas in New York State: Bronx and New York cities. <br>
+The **`key issue`** of the story is the **vulnerability of people in New York State to the pandemic that increases as poverty and violance firearm rates of this state are relatively higher than other states in the U.S**. All factors associated with uncertainty in this state were transferred into thematic spatial maps (i.e., COVID-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in sequential and systematic/linear order. The linearity is aimed at showing the link between the socio-economic factors and its concentration in Bronx and New York cities. <br>
 
 <img src="img/pg6.png" width='900'><br>
 
@@ -32,8 +32,7 @@ deal with the pandemic as suggested by local residents and shown on the last pag
 
 
 ## :mag_right: Data Sources
-This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, however, need to be converted into GeoJson file and  completed with additonal data such as longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I accessed google map. <br>
-
+This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, need to be converted into GeoJson file. Besides that, for attaching icon or markert using *pointToLayer* to map, I added longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I firstly accessed the addresses of those places via google map. <br>
 
 | Data file | Data Type | Description| Sources |
 | --------- | --------- | ---------- | ------- |
@@ -45,7 +44,7 @@ This storymap used data that are compiled from various and reliable resources be
 | food.geojson | vector | location of food pantries in Bronx and surrounding in May 2020 with longitude and latitude coordinates | https://www.foodpantries.org/ci/ny-bronx |
 
 ## :books: Libraries
-Below is the table that shows the data library of two geometric/spatial files used in this leaflet.
+Below is the table that shows the data library of this storymap.
 
 | **Library**       | **Version** | **Function**                                                                                                                   |
 | ----------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------ |
