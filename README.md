@@ -24,18 +24,23 @@ The **`key issue`** of the story is the **vulnerability of people in New York St
 The **recommendations** offered are: 1) the need of people to embrace the pandemic as a opportunity to innovate, change, and reconsider the value of social cohesion to increase resilience to pandemic; 2) working together and listening to scientists to
 deal with the pandemic as suggested by local residents and shown on the last page of this web map.<br>
 
+<img src="img/coordinates.png" width='900'><br>
+
+<img src="img/Slide14.PNG" width='900'><br>
+
+
 ## :mag_right: Data Sources
 This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, however, need to be converted into GeoJson file and  completed with additonal data such as longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I accessed google map. <br>
 
 The technique can be seen from the screenshot below.
 <br>
 
-<img src="img/coordinates.png" style="float: right;" width='500'>
+<img src="img/coordinates.png" width='900'>
 <br>
 
 For further details, I provide the storyline of this web map in the form of hand-sketch.
 <br>
-<img src="img/coordinates.png" width='500'>
+<img src="img/coordinates.png" width='900'>
 <br>
 
 | Data file | Data Type | Description| Sources |
