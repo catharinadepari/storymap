@@ -35,17 +35,6 @@ deal with the pandemic as suggested by local residents and shown on the last pag
 This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, however, need to be converted into GeoJson file and  completed with additonal data such as longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I accessed google map. <br>
 
 
-The technique can be seen from the screenshot below.
-<br>
-
-<img src="img/coordinates.png" width='900'>
-<br>
-
-For further details, I provide the storyline of this web map in the form of hand-sketch.
-<br>
-<img src="img/coordinates.png" width='900'>
-<br>
-
 | Data file | Data Type | Description| Sources |
 | --------- | --------- | ---------- | ------- |
 | uscases.geojson | vector | Number of COVID-19 cases and tests run in the U.S. | https://github.com/datasets/covid-19/tree/master/data |
