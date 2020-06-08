@@ -30,7 +30,7 @@ This storymap used data that are compiled from various and reliable resources be
 The technique can be seen from the screenshot below.
 <br>
 
-<p><img src="img/coordinates.png" align: 'center' width='500'></p>
+<img src="img/coordinates.png" tyle="float: right;" width='500'>
 <br>
 
 For further details, I provide the storyline of this web map in the form of hand-sketch.
