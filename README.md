@@ -18,18 +18,25 @@ The 3 narrative elements of this web map include:
 In terms of **`settings`**, the locus of this storymap is **New York State** that comprises 62 couunties. The **`key characters`** invoved are the citizens of the **New York State** and the **Governor Andrew Cuomo**. The **problem** is the pandemic that disrupts the lives of people in the New York State and associated policy issued by Governor Cuomo that then raised public outrage and protests. The **time frame** is the current time where the pandemic and pause order are still taking place.<br>
 
 2. **Conflict Act**<br>
-The **`key issue`** of the story is the **vulnerability of people in New York State to the pandemic increases as poverty and violance firearm rates in this state are relatively higher than other states in the U.S**. To convince users, I provided thematic spatial maps (i.e., COVID-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in sequential and systematic/linear order. The purpose is to show the link between these themes or factors and the concentration of the issues on specific areas in New York State: Bronx and New York cities <br>.
+The **`key issue`** of the story is the **vulnerability of people in New York State to the pandemic increases as poverty and violance firearm rates in this state are relatively higher than other states in the U.S**. To convince users, I provided thematic spatial maps (i.e., COVID-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in sequential and systematic/linear order. The purpose is to show the link between these themes or factors and the concentration of the issues on specific areas in New York State: Bronx and New York cities. <br>
 
 3. **Resolution Act**<br>
 The **recommendations** offered are: 1) the need of people to embrace the pandemic as a opportunity to innovate, change, and reconsider the value of social cohesion to increase resilience to pandemic; 2) working together and listening to scientists to
 deal with the pandemic as suggested by local residents and shown on the last page of this web map.<br>
 
 ## :mag_right: Data Sources
-This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, however, need to be converted into GeoJson file and  completed with additonal data such as longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I accessed google map. The technique can be seen from the screenshot below. <br>
-<img src="img/coordinates.png" width='900'><br>
+This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, however, need to be converted into GeoJson file and  completed with additonal data such as longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I accessed google map. <br>
 
-For further details, I provide the storyline of this web map in the form of hand-sketch.<br>
-<img src="img/coordinates.png" width='900'><br>
+The technique can be seen from the screenshot below.
+<br>
+
+<img src="img/coordinates.png" align: 'center' width='500'>
+<br>
+
+For further details, I provide the storyline of this web map in the form of hand-sketch.
+<br>
+<img src="img/coordinates.png" width='500'>
+<br>
 
 
 | Data file | Data Type | Description| Sources |
@@ -42,7 +49,7 @@ For further details, I provide the storyline of this web map in the form of hand
 | food.geojson | vector | location of food pantries in Bronx and surrounding in May 2020 with longitude and latitude coordinates | https://www.foodpantries.org/ci/ny-bronx |
 
 ## :books: Libraries
-Below is the table that shows the data library of two geometric/spatial files used in this leaflet: **`airports.geojson`** and **`us-states.geojson`**.
+Below is the table that shows the data library of two geometric/spatial files used in this leaflet.
 
 | **Library**       | **Version** | **Function**                                                                                                                   |
 | ----------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -68,18 +75,21 @@ cartodb_dark: {
 The miniglobe added to the storymap was retrieved from Chris Whong's leaflet example in the github with URL: https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html.
 
 ## :flags: Credits/Acknowledgement
-The credits are directed to:
+This storymap is possible to be developed due to the contributions of following institutons, organizations and individuals:
 - New York State Government for its open source database that allows the storymap to be developed
-- New York State's food pantry and homeless shelters database
 - U.S. Center of Disease Control and Prevention for providing recent data of COVID-19 cases in the U.S.
--  for the inspiring video of New York's streets during the pandemic
-- Social media: *New York Times*, *Los Angeles Times*, for providing the current information that relate with the pandemic in New York State
--
-- Professor Bo Zhao for advisory and guidance that allows the improvement for this storymap possible to be made
-- students of GEOG 458 in University of Washington for the peer-reviewing <br>
+- Taylor DesOrmeau for article *What’s the difference between Michigan’s stay-at-home order and state of emergency?* in the [mlive.com](https://www.mlive.com/public-interest/2020/04/whats-the-difference-between-michigans-stay-at-home-order-and-state-of-emergency.html)
+-  Lazaro Gamio for article *State By State: Comparing Coronavirus Death Rates Across U.S.* in the [New York Times](https://www.nytimes.com/interactive/2020/04/22/us/coronavirus-death-rates.html)
+-  Orion Rummier and Rebecca Falconer for article *In photos: Groups protest coronavirus lockdowns across the U.S.* in the [Axios](https://www.axios.com/coronavirus-protest-social-distancing-1bc7fb5a-b94c-471e-adf2-c50bfad4f242.html)
+-  Robin Abcarian for article *Column: Gun-toting Republicans ignoring quarantine orders? Yes, even coronavirus has become part of the culture wars* in the [Los Angeles Times](https://www.latimes.com/opinion/story/2020-04-17/column-gun-toting-republicans-ignoring-quarantine-orders-yes-even-coronavirus-has-become-part-of-the-culture-wars)
+-  Julianne Malveaux for article *What Others Are Saying Homelesness Crisis: We are Better than This* in the [New Orleans Tribune](https://theneworleanstribune.com/what-others-are-saying-homelessness-crisis-we-are-better-than-this/)
+-  Foodpantries.org for [foodbank list](https://www.foodpantries.org/ci/ny-bronx) in Bronx
+-  Homelessshelterdirectory.org for [homeless shelter](https://www.homelessshelterdirectory.org/cgi-bin/id/shelter.cgi?shelter=20310) in Bronx
+-  The NewYorker for the inspiring [video](https://www.youtube.com/watch?v=rYTNO_WtNys) *The Streets of New York City Under Quarantine)*
+- Professor Bo Zhao instructor of GEOG 458 coursework at the University of Washington, Seattle for advisory and guidance that allows the improvement of this storymap. <br>
 
-### :link: References <br>
-[1] Holling:  <https://core.ac.uk/download/pdf/52941869.pdf> <br>
-[2] TeachMideast](https://teachmideast.org/articles/digital-geography-applications/ <br>
-[3] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4) <br>
-[4] Laflet Plugin <https://leafletjs.com/plugins.html> <br>
+### :link: References
+[1] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
+[2] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East <br>
+[3] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
+[4] [Leaflet](https://leafletjs.com/plugins.html) <br>
