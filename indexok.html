@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resilience Story of New York</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="Resilience New York"/>
+    <meta property="og:url" content="http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"/>
+    <meta property="og:description" content="Resilience Storymap."/>
+    <meta property="og:image" content="../../img/social.png"/>
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- add a favicon of NY big apple from website https://favicon.io/favicon-converter/-->
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
+
+    <!--add required libraries-->
+    <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--mini globle map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="js/Control.GlobeMiniMap.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.2.5.js"></script>
+
+</head>
+<body>
+
+<!--Navigations,container,and button -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark storymap-navbar">
+  <a class="navbar-brand" href="New-York.png">
+   <img src="img/New-York.png" alt="Logo" style="width:35px;">NYS</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="https://www.nyhistory.org/">History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.nytimes.com/">Today</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.100resilientcities.org/resilience-future-cities/">Future</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Create Storymap -->
+<div id="storymap" class="container-fluid storymap">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 storymap-story" style="top: 18px;">
+
+      <section data-scene="overview" data-background="img/nyvintage.mp4">
+                <div class="fullscreen text-center">
+                    <h1 class="display-4 d-flex justify-content-center">Resilience Story of New York</h1>
+                    <strong class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95); font-size:20px;">This story is a reflection on the struggles of New York State
+                      in dealing with COVID-19 pandemic that is complicated by social and economic inequity facts.</strong>
+                      <center>
+                        <button type="button" style="border:2px solid white; background-color:transparent;"><a class="text-white" style="font-size:14px" href="https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html">Case Trend</a>
+                        </button>
+                        <button type="button" style="border:2px solid black; background-color:black;"><a class="text-white" style="font-size:14px" href="https://www.ny.gov/">Outreach</a>
+                        </button>
+                      </center>
+                    </div>
+                  </section>
+
+            <section data-scene="cases" class="visible viewing" style="background-color:#535252; color:white;"> <!-- alternatively use class='invisible' -->
+              <h2><b>Pandemic</b></h2>
+              <p>The first cases in the U.S. were identified among travelers returning from Wuhan, China, in the middle of January 2020.</p>
+              <img src="img/covid_patient.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Stucked with Coronavirus">
+              <p style="text-align:center;"><a href="https://untappedcities.com/2016/06/24/lost-in-old-new-york-vintage-photos-from-the-museum-of-the-city-of-new-york/">Countesy of MCNY</a></p>
+              <p>The coronavirus spread in the U.S. had drastically changed the way people live their daily lives. The COVID-19 cases in New York State, <b>the epicenter of the pandemic
+                in the U.S.</b>, was reported to reach nearly <strong>343,705</strong> in the time this web map is developed on May 13, 2020. The map shows the striking contrast between cases
+                found in this state and those in other states.The figure below also displays the number of deaths of this state which is significantly higher than 2 other major states: Louisiana, Michigan, and Washington.</p>
+              <img src="img/NYC_compare.jpg" width="400px" height="200px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="Compared to other states">
+              <p style="text-align:center"><a href="https://www.nytimes.com/interactive/2020/04/22/us/coronavirus-death-rates.html">Countesy of NY Times</a></p>
+              <br>
+            </section>
+
+            <section data-scene="order" class="visible viewing" style="background-color:#535252; color:white;">
+              <h2><b>Pause Order</b></h2>
+              <p>As the US grapples with the rapid spread of the coronavirus, the Governor Andrew M. Cuomo, ordered staying at home. People reacted to this differently.
+                Some believed the order is inconstitutional, while others believed it is a necessary. The map shows the distribution of <strong>public response to the pause order</strong>
+                retrieved from social media Twitter by using <strong>data-crawling technique</strong></p>
+              <img src="img/stay.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="outrage">
+              <p style="text-align:center;"><a href="https://www.mlive.com/public-interest/2020/04/whats-the-difference-between-michigans-stay-at-home-order-and-state-of-emergency.html">Countesy of DesOrmeau</a></p>
+              <img src="img/tweet1.png" width="100%" height="100%" class="img-responsive img-thumbnail" alt="responsive image" alt-text="tweet2"><br>
+              <img src="img/tweet2.png" width="100%" height="100%" class="img-responsive img-thumbnail" alt="responsive image" alt-text="tweets">
+            </section>
+
+            <section data-scene="outrage" class="visible viewing" style="background-color:#535252; color:white">
+                <h2><b>Public Outrage</b></h2>
+                <p>The protest continues <strong>from social media to public streets</strong>. People flocked to streets, criticizing the governor's pause order and lockdow as they will
+                create more economic problem and unemployment</p>
+                <img src="img/NY_protests.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="outrage">
+                <p style="text-align:center;"><a href="https://www.axios.com/coronavirus-protest-social-distancing-1bc7fb5a-b94c-471e-adf2-c50bfad4f242.html">Countesy of Axios</a></p>
+                Protests often led to vandalism. At least <strong>nine shootings</strong>took place in March 2020, causing at least <strong>4 dead victims and 7 injured victims</strong>.
+                The map shows the distribution of <strong>FIREARM VIOLENCE RATES</strong> throughout the states. Note the highest violance rate of Bronx City which reaches nearly <strong>905.1</strong>
+                among counties in this state.
+                <img src="img/NY_protest_guns.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="outrage">
+                <p style="text-align:center;"><a href="https://www.latimes.com/opinion/story/2020-04-17/column-gun-toting-republicans-ignoring-quarantine-orders-yes-even-coronavirus-has-become-part-of-the-culture-wars">Countesy of LA Times</a></p>
+                <br>
+            </section>
+
+            <section data-scene="poverty" class="visible viewing" style="background-color:#535252; color:white">
+                <h2><b>Violence and Poverty</b></h2>
+                <p>Being one of the wealthiest states in the USA does not necessarily mean that this state is free from homelessness and poverty.
+                  NY States has the greatest income divide in the U.S. <strong>with ratio between the wealthiest and the middle income residents is 1 percent to 99 percent. </strong>
+                  The average income of the top 1 percent was <strong>$2.2 million</strong> in 2015, while the average income of the bottom 99 percent was <strong>$49,617.</strong>
+                  The map shows the Median household income level throughout the U.S. states in 2020.</p>
+                <img src="img/NY_poverty.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image"alt-text="NYC at midgnight">
+                <p style="text-align:center;"><a href="https://theneworleanstribune.com/what-others-are-saying-homelessness-crisis-we-are-better-than-this/">Countesy of Julianne Malveaux</a></p>
+            </section>
+
+            <section data-scene="volunteer" class="visible viewing" style="background-color:#535252; color:white">
+                <h2><b>Heroism</b></h2>
+                <p>In this difficult time, <strong>heroism</strong> act increases. The map shows some of <strong>150 food pantries</strong> that voluntarily provided
+                  free food in cities with highest economic gap, poverty, and violence firearm rate. These pantries are <strong>organized by church and social institutions</strong>,
+                  and surprisingly, by <strong>retired seniors</strong> whose services were then replaced by young people.
+              </p>
+                <img src="img/NYS_foodbank.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="farmer">
+                <p style="text-align:center;"><a href="https://www.nytimes.com/2020/04/08/business/economy/coronavirus-food-banks.html">Countesy of New York Times</a></p>
+                <p>Many organizations are now providing shelters for homeless. During this time, they did not require homeless to show their ID.
+                The map shows the distribution of the shelters for homeless in New York and Bronx cities.</p>
+                <img src="img/NY_shelter.jpg" width="500px" height="300px" class="img-responsive img-thumbnail" alt="responsive image" alt-text="farmer">
+                <p style="text-align:center;"><a href="https://www.homelessshelterdirectory.org/cgi-bin/id/shelter.cgi?shelter=20310">Countesy of Homeless Shelter Directory</a></p>
+            </section>
+
+            <section data-scene="end" data-background="img/NY_worktogether.jpg">
+                <div class="fullscreen text-center">
+                    <h1 class="display-4 d-flex justify-content-center" style="background:black"></h1>
+                    <h4 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)"><b>This project is dedicated foremostly to all volunteers and the frontliners who unrestlessly fight
+                      against the pandemic, and the New York state's citizens whose struggles inspire us to better prepare for our future in the face of uncertain and unpredictable challenges.
+                    </b></h4>
+                </div>
+            </section>
+        </div>
+
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim" tabindex="0" style="outline: 2px dashed blue;">
+          <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(166px, -199px, 0px);">
+            <div class="leaflet-pane leaflet-tile-pane">
+            <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+              <div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(-234px, -137px, 0px) scale(1);">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/10/161/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(734px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/10/161/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(734px, 480px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-b.global.ssl.fastly.net/dark_all/10/160/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(478px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/10/162/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(990px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/10/160/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(478px, 480px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-b.global.ssl.fastly.net/dark_all/10/162/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(990px, 480px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/10/159/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(222px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-b.global.ssl.fastly.net/dark_all/10/163/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1246px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-b.global.ssl.fastly.net/dark_all/10/159/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(222px, 480px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/10/163/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1246px, 480px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/10/158/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-34px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/10/164/369@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1502px, 224px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/10/158/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-34px, 480px, 0px); opacity: 1;">
+                <img alt="" role="presentation" src="http://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/10/164/370@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1502px, 480px, 0px); opacity: 1;">
+              </div>
+            </div>
+          </div>
+          <div class="leaflet-pane leaflet-shadow-pane">
+          </div>
+          <div class="leaflet-pane leaflet-overlay-pane">
+          </div>
+          <div class="leaflet-pane leaflet-marker-pane">
+          </div>
+          <div class="leaflet-pane leaflet-tooltip-pane">
+          </div>
+          <div class="leaflet-pane leaflet-popup-pane">
+          </div>
+          <div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(41291.5px, 94741px, 0px) scale(512);">
+          </div>
+        </div>
+        <div class="leaflet-control-container">
+          <div class="leaflet-top leaflet-left">
+          </div>
+          <div class="leaflet-top leaflet-right">
+          </div>
+          <div class="leaflet-bottom leaflet-left">
+          </div>
+          <div class="leaflet-bottom leaflet-right">
+            <div class="leaflet-control-attribution leaflet-control storymap-attribution">
+              <a href="https://github.com/jakobzhao/storymap">
+              <img src="http://jakobzhao.github.io/storymap/img/logo.png" width="18px" target="_blank"> storymap.js
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--arrow-->
+  <div class="zoomIn infinite material-icons d-flex fixed-bottom mb-5 storymap-scroll-down justify-content-left">keyboard_arrow_down
+  </div>
+  <div class="storymap-progressline" style="width: 6.2383%;">
+  </div>
+  <div class="storymap-navwidget text-center">
+    <li>
+      <a class="material-icons" style="font-size: 16px" data-toggle="tooltip" title="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene1\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);" data-original-title="scene&nbsp;1">home
+      </a>
+    </li>
+    <li>
+      <a class="material-icons" style="font-size: 12px" data-toggle="tooltip" title="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene2\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);" data-original-title="scene&nbsp;2">lens
+      </a>
+    </li>
+    <li>
+      <a class="material-icons" style="font-size: 12px" data-toggle="tooltip" title="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene3\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);" data-original-title="scene&nbsp;3">lens
+      </a>
+    </li>
+</div>
+</div>
+
+  <!-- icons -->
+    <dl>
+        <dt>
+            <!--facebook icon-->
+            <a class="fab fa-facebook-square btn" href="https://facebook.com/sharer.php?u=http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html" style="top:60px"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--facebook icon-->
+            <a class="fab fa-github btn" href="https://github.com/catharinadepari/storymap" style="top:80px"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--info icon-->
+            <i class="fas fa-info-circle btn" style="top:100px" data-toggle="modal" data-target="#info-modal"></i>
+        </dt>
+    </dl>
+
+    <!--the info page-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><b>About</b></h4>
+                </div>
+                <div class="modal-body">
+                    <p>This webmap contains a resilience story of New York State with data collected mainly from <b>World Bank's database, The New York Times,
+                      Los Angeles Times, and the official website of NY State government</b>. The objective is to promote understanding that the resilience capacity of a community is <b>not primarily
+                      dependent only upon the efforts made by their leaders but by the initiatives and solidarity among the members</b>. The resilience story of New York State is brought up as it
+                      provides a lesson learn of how poverty, security, and trust interplay, complicate, and dictate the community's future in the face of pandemic.
+                    </p>
+                    <p><i>Final Project for GEOG 458 coursework, University of Washington</i></p>
+                    <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
+                    <p><b>Author: Catharina Depari</b> | University of Washington | Seattle
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- main javascript -->
+<script type="text/javascript">
+
+    //create color for cases layers
+    function getColor(d) {
+      return d > 300000 ? '#e6475f' :
+          d > 150000  ? '#ec785a' :
+          d > 50000 ? '#eaa368' :
+          d > 10000  ? '#e8c888' :
+                '#ede8b4';
+          }
+    function style(feature) {
+      return {
+        fillColor: getColor(feature.properties.cases),
+        fillOpacity: 0.7,
+        weight: 0.6,
+        dashArray: '',
+        opacity: 0.6,
+        color: 'black'
+      };
+    }
+    // set cases_legend
+    var cases_legend = L.control({position: 'topleft'});
+    cases_legend.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'cases_legend'),
+      grades = [],
+      labels = [],
+      from, to;
+      for (var i = 0; i < grades.length; i++) {
+        from = grades[i];
+        to = grades[i + 1];
+        labels.push(
+          '<i style="background:' + getColor(from + 1) + '"></i> ' +
+          from + (to ? '&ndash;' + to : '+'));
+        }
+        div.innerHTML = labels.join('<br>');
+        return div;
+      };
+      var cases_legend = '<i style="background-color:#e6475f; opacity: 0.7"></i><p><b>300k+</b></p>' +
+        '<i style="background-color:#ec785a; opacity: 0.7"></i><p><b>150k-300k</b></p>'+
+        '<i style="background-color:#eaa368; opacity: 0.7"></i><p><b>50k-150k</b></p>'+
+        '<i style="background-color:#e8c888; opacity: 0.7"></i><p><b>10k-50k</b></p>'+
+        '<i style="background-color:#ede8b4; opacity: 0.7"></i><p><b><10k</b></p>';
+
+    //create color for outrage layer
+    function out_color(d) {
+      return d > 400 ? '#da5da4' :
+          d > 200  ? '#f17c8e' :
+          d > 50 ? '#f1a38a' :
+          d > 10  ? '#f1c89e' :
+                '#f1e8c5';
+          }
+    function out_style(feature) {
+      return {
+        fillColor: out_color(feature.properties.NYS_Violence_Fire_rate),
+        fillOpacity: 0.7,
+        weight: 0.6,
+        dashArray: '',
+        opacity: 0.6,
+        color: 'black'
+      };
+    }
+    // Set out_legend
+    var out_legend = L.control({position: 'topleft'});
+    out_legend.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'out_legend'),
+      gradesout = [],
+      labelsout = [],
+      from, to;
+      for (var i = 0; i < gradesout.length; i++) {
+        from = grades[i];
+        to = grades[i + 1];
+        labelsout.push(
+          '<i style="background:' + getColor(from + 1) + '"></i> ' +
+          from + (to ? '&ndash;' + to : '+'));
+        }
+        div.innerHTML = labelsout.join('<br>');
+        return div;
+      };
+      var out_legend = '<i style="background-color:#da5da4; opacity: 0.7"></i><p><b>400k+</b></p>' +
+        '<i style="background-color:#f17c8e; opacity: 0.7"></i><p><b>200k-400k</b></p>'+
+        '<i style="background-color:#f1a38a; opacity: 0.7"></i><p><b>50k-200k</b></p>'+
+        '<i style="background-color:#f1c89e; opacity: 0.7"></i><p><b>10k-50k</b></p>'+
+        '<i style="background-color:#f1e8c5; opacity: 0.7"></i><p><b><10k</b></p>';
+
+    //create color for poverty layers
+    function pov_color(d) {
+      return d > 55000 ? '#83205c' :
+          d > 40000  ? '#d72046	' :
+          d > 30000 ? '#db8445' :
+          d > 20000  ? '#ddb357' :
+                '#dede79';
+          }
+    function pov_style(feature) {
+      return {
+        fillColor: pov_color(feature.properties.newmed_medinco),
+        fillOpacity: 0.6,
+        weight: 0.6,
+        dashArray: '',
+        opacity: 0.6,
+        color: 'black'
+      };
+    }
+    // Set pov_legend
+    var pov_legend = L.control({position: 'topleft'});
+    pov_legend.onAdd = function (map) {
+      var div = L.DomUtil.create('div', 'pov_legend'),
+      gradespov = [],
+      labelspov = [],
+      from, to;
+      for (var i = 0; i < gradespov.length; i++) {
+        from = grades[i];
+        to = grades[i + 1];
+        labelspov.push(
+          '<i style="background:' + getColor(from + 1) + '"></i> ' +
+          from + (to ? '&ndash;' + to : '+'));
+        }
+        div.innerHTML = labelspov.join('<br>');
+        return div;
+      };
+      var pov_legend = '<i style="background-color:#83205c; opacity: 0.6"></i><p><b>400k+</b></p>' +
+        '<i style="background-color:#d72046	; opacity: 0.6"></i><p><b>200k-400k</b></p>'+
+        '<i style="background-color:#db8445; opacity: 0.6"></i><p><b>50k-200k</b></p>'+
+        '<i style="background-color:#ddb357; opacity: 0.6"></i><p><b>10k-50k</b></p>'+
+        '<i style="background-color:#dede79; opacity: 0.6"></i><p><b><10k</b></p>';
+
+      var food = L.divIcon({
+        html: '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036"></i>',
+        iconSize: [30, 30],
+        className: 'myDivIcon'
+      });
+      var shelter = L.divIcon({
+        html: '<i class="far fa-flag" style="font-size:25px;color: #a2c036"></i>',
+        iconSize: [30, 30],
+        className: 'myDivIcon'
+      });
+
+      // create legend for icons
+      // Set pov_legend
+      var volunteer_legend = L.control({position: 'topleft'});
+      volunteer_legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'volunteer_legend'),
+        gradespov = [],
+        labelspov = [],
+        from, to;
+        for (var i = 0; i < gradespov.length; i++) {
+          from = grades[i];
+          to = grades[i + 1];
+          labelsvolunteer.push(
+            '<i style="background:' + getColor(from + 1) + '"></i> ' +
+            from + (to ? '&ndash;' + to : '+'));
+          }
+          div.innerHTML = labelsvolunteer.join('<br>');
+          return div;
+        };
+        var volunteer_legend = '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036">foodbank</i>' +
+          '<i class="far fa-flag" style="font-size:25px;color: #a2c036">shelter</i>';
+
+      // var vol_legend = '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036">NYS_foodbank</i>';
+      // var shelter_legend = '<i class="far fa-flag" style="font-size:25px;color: #a2c036">shelter</i>';
+      var tweet_legend = '<i class=""><svg height="16" width="16"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="0" fill="#00ff00" fillOpacity="0.4" /></svg></i><p><b>Tweets</b></p>';
+
+    // create layers
+    var layers = {
+      cases: {
+        layer: L.geoJson.ajax('assets/uscases.geojson', {
+          style: style,
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup("<h6><b>county:</h6></b>" + feature.properties.name + " " +"<h6><b>cases:</h6></b>" + feature.properties.cases,
+          {sticky: false, className: "feature-label", permanent: false, offset: [-1, -1]});
+        }
+      }), legend: cases_legend
+    },
+
+    order: {
+      layer: L.geoJson.ajax('assets/tweets.geojson', {
+          pointToLayer: function (feature, latlng) {
+            //return L.circle(latlng, 1000*Math.pow(Math.floor((Math.random() * 3) + 1), 2));
+            return L.marker(latlng, {icon: L.divIcon({
+            html: '<i class="glyphicon glyphicon-search"><svg height="16" width="16"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="0" fill="#00ff00" fillOpacity="0.4" /></svg></i>',
+            className: 'glyphicon glyphicon-one-fine-smaller-dot glow-effect'})});
+            },
+          onEachFeature: function (feature, layer) {
+          layer.bindTooltip("<h3>twitter</h3>" + feature.properties.text),{sticky: true,
+            className: "feature-tooltip"};
+            }
+          }), legend: tweet_legend
+        },
+
+    outrage: {
+      layer: L.geoJson.ajax('assets/nys_viol_rate.geojson', {
+        style: out_style,
+      onEachFeature: function (feature, layer) {
+          layer.bindPopup("<h6><b>County:</b></h6>" + feature.properties.NAME + " " +"<h6><b>Firearm Violence Rate:</b></h6>" + feature.properties.NYS_Violence_Fire_rate,
+          {sticky: true, className: "feature-label", permanent: false, direction: "center"});
+        },
+      }), legend: out_legend
+    },
+
+    poverty: {
+      layer: L.geoJson.ajax('assets/nyspvt.geojson', {
+        style: pov_style,
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup("<p><b>County</p></b>" + feature.properties.County + " " +"<p><b>Income</p></b>" + feature.properties.newmed_medinco,
+            {sticky: true, className: "feature-label", permanent: false, direction: "center"});
+          },
+        }), legend: pov_legend
+      },
+
+      // volunteer: {
+      //   layer: L.geoJson.ajax('assets/food.geojson', {
+      //     onEachFeature: function (feature, layer) {
+      //         layer.bindPopup("<h3>food pantry</h3>" + feature.properties.text);
+      //     },
+      //     pointToLayer: function (feature, latlng) {
+      //       if(feature.properties.type == "foodbank"){
+      //         var marker = L.marker(latlng,{icon: food});
+      //       } else {
+      //         var marker = L.marker(latlng, {icon: shelter});
+      //       };
+      //       return marker;
+      //     }
+      //   }), legend: volunteer_legend
+      // },
+
+      volunteer: {
+        layer: L.geoJson.ajax('assets/food.geojson', {
+          onEachFeature: function (feature, layer) {
+              layer.bindPopup("<h3>food pantry</h3>" + feature.properties.text);
+          },
+          pointToLayer: function (feature, latlng) {
+              return L.marker(latlng, {icon: L.divIcon({
+                html: '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036"></i>',
+                iconSize: [30, 30],
+                className: 'myDivIcon'
+              })
+            }); legend: volunteer_legend
+          },
+        }),
+      },
+
+    shelter: {
+      layer: L.geoJson.ajax('assets/shelter.geojson', {
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup("<h3>shelter</h3>" + feature.properties.text);
+        },
+        pointToLayer: function (feature, latlng) {
+          return L.marker(latlng, {icon: L.divIcon({
+            html: '<i class="far fa-flag" style="font-size:25px;color: #a2c036"></i>',
+            iconSize: [30, 30],
+            className: 'myDivIcon'
+          })
+        }); legend: shelter_legend
+      },
+    }),
+  },
+
+   //tiled maps
+   mytile: {
+     layer: L.tileLayer('assets/tiles/{z}/{x}/{y}.png', {
+       maxZoom: 5,
+       tms: true,
+       attribution: 'Generated by QMetaTiles'
+     }),
+   },
+
+    antique: {
+      layer: L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-antique/{z}/{x}/{y}.png')
+    },
+
+    stadia: {
+      layer: L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+      	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+      })
+    },
+
+     antique: {
+       layer: L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-antique/{z}/{x}/{y}.png')
+     },
+
+     esri_gray: {
+       layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+         attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+         detectRetina: true
+       })
+     },
+
+    // Basemap
+    cartodb_dark: {
+      layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}@2x.png', {
+        attribution: "Generated by QMetaTiles",
+        detectRetina: true
+      })
+    }
+  };
+
+    // Information for flyto set-up
+    // Bronx: 40.8448, -73.8648
+    // NYstate: 43.00035 -75.4999
+    // USA: 37.6 -95.665
+
+    // Scenes
+    var scenes = {
+        overview: {lat:37.6, lng: -95.665, zoom: 7, name: 'overview', layers: []},
+        cases: {lat:37.6, lng: -95.665, zoom: 3.8, name: 'cases', layers: [layers.cases]}, //cases of covid, scale: US
+        order: {lat:37.6, lng: -95.665, zoom: 3.8, name: 'order', layers: [layers.cases, layers.order]}, //tweets scale: NYS
+        outrage: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'outrage', layers: [layers.outrage]}, // protests, USA
+        poverty: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'poverty', layers: [layers.poverty]}, // income level, scale : NYS
+        volunteer: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'volunteer', layers: [layers.volunteer, layers.shelter, layers.poverty]}, // food, scale: Bronx, NYC
+        end: {lat:40.8448, lng: -73.8648, zoom: 4, name: 'end'}
+    };
+
+    $('#storymap').storymap({
+        scenes: scenes,
+        layers: layers,
+        baselayer: layers.cartodb_dark,
+        legend: true,
+        navbar: false,
+        credits: "",
+        loader: true,
+        scalebar: false,
+        scrolldown: true,
+        flyo: true,
+        progressline: true,
+        navwidget: true,
+
+        // createMap: function () {
+        createMap: function () {
+            var map = L.map($(".storymap-map")[0], {
+              center: [50,10],
+              zoom: 15,
+              maxZoom: 18,
+              attributionControl: false,
+              zoomControl: false,
+              scrollWheelZoom: true,
+              doubleClickZoom: true,
+              dragging: true,
+              animate: true,
+              fadeAnimation: true,
+              zoomAnimation: true,
+              easeLinearity: 0.35,
+              gestureHandling: 'cooperative'
+            }).setView([40.80312772327861, -74.25052800770425], 2.5);
+
+
+            // animated zoom
+              map.on('click',
+              function(e){
+                var coord = e.latlng.toString().split(',');
+                var lat = coord[0].split('(');
+                var lng = coord[1].split(')');
+                console.log("You clicked the map at latitude: " + lat[1] + " and longitude:" + lng[0]);
+
+              map.flyTo([40.8448, -73.8648], 12, {
+                animate: true,
+                duration: 2 //
+              });
+            });
+
+            //Altertively, use scroll wheel Zoom
+            // map.on('click', function() {
+            //   if (map.scrollWheelZoom.enabled()) {
+            //     map.scrollWheelZoom.disable();
+            //   }
+            //   else {
+            //     map.scrollWheelZoom.enable();
+            //   }
+            // });
+
+            // add miniglobe
+            var miniglobe = new L.Control.GlobeMiniMap({
+              marker: 'red',
+              position: 'bottomright',
+              topojsonSrc: 'js/world.json',
+              attribution: 'Chris Whong'// https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html
+            }).addTo(map);
+
+            //add zoom control with your options
+            L.control.zoom({
+              position:'bottomright'
+            }).addTo(map);
+
+            return map;
+        }
+    });
+</script>
+<div class="storymap-trigger" style="top: 30%;">
+</div>
+</body>
+</html>

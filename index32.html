@@ -52,36 +52,26 @@
 <body>
 
 <!--Navigations,container,and button -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark storymap-navbar">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <a class="navbar-brand" href="New-York.png">
    <img src="img/New-York.png" alt="Logo" style="width:35px;">NYS</a>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"overview&nbsp;1</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"cases&nbsp;2</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"order&nbsp;3</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"outrage&nbsp;4</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"poverty&nbsp;5</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"volunteer&nbsp;6</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"embrace&nbsp;7</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" "=" href="javascript:window.scrollBy(0, $('section[data-scene=\'cases\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);"end&nbsp;8</a>
-      </li>
-    </ul>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="description.html">Description</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -89,6 +79,7 @@
 <div id="storymap" class="container-fluid storymap">
   <div class="row">
     <div class="col-sm-6 col-md-4 storymap-story" style="top: 18px;">
+
       <section data-scene="overview" data-background="img/nyvintage.mp4">
                 <div class="fullscreen text-center">
                     <h1 class="display-4 d-flex justify-content-center">Resilience Story of New York</h1>
@@ -191,6 +182,11 @@
                 </div>
             </section>
         </div>
+
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map">
+        </div>
+      </div>
 
         <!--map div-->
         <div class="col-sm-6 col-md-8 storymap-map leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim" tabindex="0" style="outline: 2px dashed blue;">
@@ -307,7 +303,7 @@
 
     cases_legend.onAdd = function (map) {
       var div = L.DomUtil.create('div', 'cases_legend'),
-      grades = [1000, 500, 250, 100, 50, 25, 10],
+      grades = [],
       labels = [],
       from, to;
       for (var i = 0; i < grades.length; i++) {
@@ -332,6 +328,36 @@
         '<i style="background-color:#fff7f3; opacity: 0.6"></i><p><b><2.5k-5k</b></p>'+
         '<i style="background-color:#fff7f3; opacity: 0.6"></i><p><b><1k-2.5k</b></p>'+
         '<i style="background-color:#fff7f3; opacity: 0.6"></i><p><b>>1k</b></p>';
+    // function getColor(d) {
+    //   return d > 300000 ? '#d14556' :
+    //       d > 200000  ? '#dd694d' :
+    //       d > 100000 ? '#df8d4f' :
+    //       d > 50000  ? '#dcad5f' :
+    //             '#daca79';
+    //       }
+    // // Set style function that sets fill color.md
+    // function style(feature) {
+    //   return {
+    //     fillColor: getColor(feature.properties.cases),
+    //     fillOpacity: 0.7,
+    //     weight: 0.6,
+    //     dashArray: '',
+    //     opacity: 0.6,
+    //     color: 'black'
+    //   };
+    // }
+    // var cases_legend = L.control({position: 'topleft'});
+    //
+    // cases_legend.onAdd = function (map) {
+    //   var div = L.DomUtil.create('div', 'cases_legend');
+    //   div.innerHTML += '<b># Covid-19 Cases</b><br />';
+    //   div.innerHTML += '<i style="background-color:#d14556; opacity: 0.6"></i><p><b>300k+</b></p>';
+    //   div.innerHTML += '<i style="background-color:#dd694d; opacity: 0.6"></i><p><b>200k-300k</b></p>';
+    //   div.innerHTML += '<i style="background-color:#df8d4f; opacity: 0.6"></i><p><b>100k-200k</b></p>';
+    //   div.innerHTML += '<i style="background-color:#dcad5f; opacity: 0.6"></i><p><b>50k-100k</b></p>';
+    //   div.innerHTML += '<i style="background-color:#daca79; opacity: 0.6"></i><p><b><50k</b></p>';
+    //   return div;
+    // };
 
     //create color for OUTRAGE layer
     function out_color(d) {
@@ -516,7 +542,6 @@
         layers: layers,
         baselayer: layers.cartodb_dark,
         legend: true,
-        navbar: true,
         credits: "",
         loader: true,
         scalebar: false,

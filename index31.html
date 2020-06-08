@@ -328,7 +328,7 @@
 
     cases_legend.onAdd = function (map) {
       var div = L.DomUtil.create('div', 'cases_legend'),
-      grades = [1000, 500, 250, 100, 50, 25, 10],
+      grades = [],
       labels = [],
       from, to;
       for (var i = 0; i < grades.length; i++) {

@@ -1,29 +1,41 @@
 # storymap
 
-<img src="img/leaflet_airport.png" width='950'> <br>
-## Resilience Story of New York in the Face of COVID-19<br>
+<img src="img/page_front.png" width='950'> <br>
+## Resilience Story of New York<br>
 ### :newspaper: Introduction
-The aim of this project is to visualize the spatial distribution of airport's traffic control tower in the U.S. Air traffic control tower or **`ATCTs`** .<br>
+According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf)]), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes. In the context of this storymap, the resilience is the capacity of New York State citizens to withstand a disturbance including a pandemic.<br>
+The aim of this storymap is to represent the strugggles of the New York State citizens in dealing with **`the COVID-19 pandemic`** which is complicated by some economic and social facts that had long interplayed in the U.S. history.<br>
+This storymap evidences the potential of digital technology in explaining a social phenomenon in a specific geographic area and to mobilze social power towards a desired change (James, Kitchin and Leszczynski 2018, 26).<br>
 
-<1> 'I <symbol love>Love New York' & Hate Coronavirus
-<1a> New York Before COVID-19
-<1b> Cases and Spread of COVID-19
-<2> The Dilema
-<2a> Lockdown, Self-Quarantine, & Social Distancing
-<2b> From Protests, Gunfires, to Reopenings
-<3> The Beauty 'of' the Beast
-<3a> Social Cohesion
-<3b> Heroism
-<3c> Innovation
-<4> Resilience & Change the Mindset
-
-Reopening:
-<iframe width="476" height="267" src="" frameborder="0" allowfullscreen></iframe>
+> *Digital Geography** is a set of technologies that go beyond an engagement with an interface, but also involve spatial big data. DUe to its social power, one even called the story map as **`human document`**[TeachMideast](https://teachmideast.org/articles/digital-geography-applications/).<br>
 
 ### :hammer: Storyline
+In the web map process, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is public, in other words, it is not specified to particular groups. I used **New York State** as the locus of this story to allow me to explain the connections between different factors (social and economy) from country to city level that complicate the resilience story of New York State.<br>Among different types of **`GENRES`**  in the Roth's Taxonomy (2016), I adopted **multimedia experienced genre**  which use *layout* and *text, images, and graphics hyperlinks* to enforce **linearity**.<br>
+
+The 3 narrative elements of this web map include:
+<br>
+1. **SET-UP ACT**<br>
+In terms of **`settings`**, the locus of this storymap is **New York State** that comprises 62 couunties. The **`key characters`** invoved are the citizens of the **New York State** and the **Governor Andrew Cuomo**. The **problem** is the pandemic that disrupts the lives of people in the New York State and associated policy issued by Governor Cuomo that then raised public outrage and protests. The **time frame** is the current time where the pandemic and pause order are still taking place.<br>
+<img src="img/NY_governor.jpg" width='600'><br>
+
+2. **Conflict Act**<br>
+The **`key issue`** of the story is the **vulnerability of people in New York State to the pandemic increases as poverty and violance firearm rates in this state are relatively higher than other states in the U.S**. To convince users, I provided thematic spatial maps (i.e., covid-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in sequential and systematic/linear order. The purpose is to show the link between these themes or factors and the concentration of the issues on specific areas in New York State: Bronx and New York cities <br>.
+<img src="img/NY_governor.jpg" width='600'><br>
+
+3. **Resolution Act**<br>
+The **recommendations** offered is the need of people to embrace the pandemic asa opportunity to innovate, change, and value solidarity as the most important asset to withstand the pandemic. improve their quality are assessing the land's suitability for oil and gas leasing through comprehensive planning processes, engaging community in the planning, raising the national minimum bid from $2.00 per acre to at least $10.00 per acre, and setting up a reliable evaluation to evaluate the lessees' capacity of exploring and producing oil and gas <br>
+
 The primary functions used to create the spatial map are :
 - **`var mymap = L.map()`** for initializing the map and set its view related to geographical coordinates and a zoom level.
 -<br>
+
+## :mag_right: Data Sources
+The two data files are obtained from two different sources as described below:
+| Name of data file   | Data Format      | Description | Source |
+| ------------------- | ----------------------- | ----------- | ------ |
+| *airports.geojson*  | geojson/ geometric data | contains all the airports in the United States |<https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile>|
+| *us-states.geojson* | geojson/ geometric data | containing all the states' boundaries of the United States |https://bost.ocks.org/mike/|
+| basemap | tile layer | a tile layer for the basemap | <http://leaflet-extras.github.io/leaflet-providers/preview/> |
 
 ## :books: Libraries
 Below is the table that shows the data library of two geometric/spatial files used in this leaflet: **`airports.geojson`** and **`us-states.geojson`**.
@@ -46,17 +58,6 @@ Below is the table that shows the data library of two geometric/spatial files us
 
 There are 52 features contained in the **`us-state.geojson`** file and 940 features contained in the **`airports.geojson`** file.
 
-## :mag_right: Data Resources
-The two data files are obtained from two different sources as described below:
-| Name of data file   | Data Format      | Description | Source |
-| ------------------- | ----------------------- | ----------- | ------ |
-| *airports.geojson*  | geojson/ geometric data | contains all the airports in the United States |<https://catalog.data.gov/dataset/usgs-small-scale-dataset-airports-of-the-united-states-201207-shapefile>|
-| *us-states.geojson* | geojson/ geometric data | containing all the states' boundaries of the United States |https://bost.ocks.org/mike/|
-| basemap | tile layer | a tile layer for the basemap | <http://leaflet-extras.github.io/leaflet-providers/preview/> |
-
-## :bulb: Analysis
-There are two interpretations that can be drawn from this spatial map where red icon represents the availability of ATCTs and yellow icon indicates the unavailability of ATCTs.
-- ***First***, the  <br>
 
 ## :flags: Credits/Acknowledgement
 The credits for this project go to:
@@ -109,45 +110,3 @@ The structure of your github repository should like something below.
 ## Deliverable
 
 Once you complete this lab assignment, please make sure both the github repository and the web site work appropriately. Then, you will need to submit the url of the GitHub repository to **Canvas Dropbox**. (On the assignment tab,  press the `Submit Assignment` button to submit. Please contact the instructor or TA if you have any difficulty.)
-
-# The Guideline for Essay
-
-You are expected to write a essay to analyze a digital-geography-related project (e.g., web map, smart dashboard, geo-narrative, etc.). You are aiming for **no less than 1500 words** coalescing around the examined digital-geography project and readings from this quarter.
-
- Through writing this essay, you are expected to use the learned knowledge and skill set to holistically examine the project's functions and critically reflect upon its social implications. This essay can be simple and focus in nature, but must include the following features:
-
-- create a dedicated github repository, and write this essay on a readme.md file of this repo.
-- introduce this digital-geography project, including, but not limitedt to,
-  - the goal of this project (why this project was made?)
-  - the major functions
-  - the targeting audience
-  - the authors and their affilication
-- describe the systematic architecture
-  - client, server, services, and data.
-- inspect the code of this project, especially look into the following issues.
-  - What are the data flowed in between the client and server.
-  - The major libaries in use and their functions.
-  - Does this project support responsive design?
-- list the data sources
-  - vectors (i.e., geojson)
-  - rasters (i.e., tilelayer)
-  - critique its overalll UI/UX and Web Mapping design if it has.
-- describe the basemap, the thematic layer and the interactive features if it has.
-- list any web map element in use (e.g, scalar bar, north arrow, legend, etc.) if it has.
-- analyze the strengths and weakness of the examined project.
-- disucss anything else you feel worthy to share.
-- reflect upon this project with some social theories, such as digital divide, power relationship, surveillance and/or resistance.
-
-Since the essay is written in mardown syntax, please try your best to include the following four structure or contents:
-
-- list, highlight,
-- images such as screenshot.
-- code snippet
-- table
-
-##Submission
-
-Please submit the url link of your essay to the final project submission tab on Canvas. Essay is due no later than the end of **Week 10**.
-
-
->  **Note:** The requirements to the essay may be slightly changed according the progress of this course. The final requirements are subject to the instructor's notification.
