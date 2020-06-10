@@ -7,7 +7,7 @@
 
     <!--meta data for sharing links on Facebook-->
     <meta property="og:title" content="Resilience New York"/>
-    <meta property="og:url" content="http://127.0.0.1:5500/index.html"/>
+    <meta property="og:url" content="https://sites.google.com/uw.edu/nysstorymap/home"/>
     <meta property="og:description" content="This is the storymap of New York State in the face of pandemic COVID-19"/>
     <meta property="og:image" content="img/covid.jpeg"/>
 
@@ -29,8 +29,9 @@
     <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
 
     <style>
+
     .feature-label {
-      font-family: : 'Open Sans', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: black;
       font-size: 12px;
       font-weight: bold;
@@ -237,8 +238,8 @@
           </div>
           <div class="leaflet-bottom leaflet-right">
             <div class="leaflet-control-attribution leaflet-control storymap-attribution">
-              <a href="https://github.com/jakobzhao/storymap">
-              <img src="http://jakobzhao.github.io/storymap/img/logo.png" width="18px" target="_blank"> storymap.js
+              <a href="">
+              <img src="" width="18px" target="_blank">
             </a>
           </div>
         </div>
@@ -330,23 +331,23 @@
         color: 'black'
       };
     }
-    // set cases_legend
-    var cases_legend = L.control({position: 'topleft'});
-    cases_legend.onAdd = function (map) {
-      var div = L.DomUtil.create('div', 'cases_legend'),
-      grades = [],
-      labels = [],
-      from, to;
-      for (var i = 0; i < grades.length; i++) {
-        from = grades[i];
-        to = grades[i + 1];
-        labels.push(
-          '<i style="background:' + getColor(from + 1) + '"></i> ' +
-          from + (to ? '&ndash;' + to : '+'));
-        }
-        div.innerHTML = labels.join('<br>');
-        return div;
-      };
+    //set cases_legend
+    // var cases_legend = L.control({position: 'topleft'});
+    // cases_legend.onAdd = function (map) {
+    //   var div = L.DomUtil.create('div', 'cases_legend'),
+    //   grades = [],
+    //   labels = [],
+    //   from, to;
+    //   for (var i = 0; i < grades.length; i++) {
+    //     from = grades[i];
+    //     to = grades[i + 1];
+    //     labels.push(
+    //       '<i style="background:' + getColor(from + 1) + '"></i> ' +
+    //       from + (to ? '&ndash;' + to : '+'));
+    //     }
+    //     div.innerHTML = labels.join('<br>');
+    //     return div;
+    //   };
       var cases_legend = '<i style="background-color:#e6475f; opacity: 0.7"></i><p><b>300k+</b></p>' +
         '<i style="background-color:#ec785a; opacity: 0.7"></i><p><b>150k-300k</b></p>'+
         '<i style="background-color:#eaa368; opacity: 0.7"></i><p><b>50k-150k</b></p>'+
@@ -372,22 +373,22 @@
       };
     }
     // Set out_legend
-    var out_legend = L.control({position: 'topleft'});
-    out_legend.onAdd = function (map) {
-      var div = L.DomUtil.create('div', 'out_legend'),
-      gradesout = [],
-      labelsout = [],
-      from, to;
-      for (var i = 0; i < gradesout.length; i++) {
-        from = grades[i];
-        to = grades[i + 1];
-        labelsout.push(
-          '<i style="background:' + getColor(from + 1) + '"></i> ' +
-          from + (to ? '&ndash;' + to : '+'));
-        }
-        div.innerHTML = labelsout.join('<br>');
-        return div;
-      };
+    // var out_legend = L.control({position: 'topleft'});
+    // out_legend.onAdd = function (map) {
+    //   var div = L.DomUtil.create('div', 'out_legend'),
+    //   gradesout = [],
+    //   labelsout = [],
+    //   from, to;
+    //   for (var i = 0; i < gradesout.length; i++) {
+    //     from = grades[i];
+    //     to = grades[i + 1];
+    //     labelsout.push(
+    //       '<i style="background:' + getColor(from + 1) + '"></i> ' +
+    //       from + (to ? '&ndash;' + to : '+'));
+    //     }
+    //     div.innerHTML = labelsout.join('<br>');
+    //     return div;
+    //   };
       var out_legend = '<i style="background-color:#da5da4; opacity: 0.7"></i><p><b>400k+</b></p>' +
         '<i style="background-color:#f17c8e; opacity: 0.7"></i><p><b>200k-400k</b></p>'+
         '<i style="background-color:#f1a38a; opacity: 0.7"></i><p><b>50k-200k</b></p>'+
@@ -413,22 +414,22 @@
       };
     }
     // Set pov_legend
-    var pov_legend = L.control({position: 'topleft'});
-    pov_legend.onAdd = function (map) {
-      var div = L.DomUtil.create('div', 'pov_legend'),
-      gradespov = [],
-      labelspov = [],
-      from, to;
-      for (var i = 0; i < gradespov.length; i++) {
-        from = grades[i];
-        to = grades[i + 1];
-        labelspov.push(
-          '<i style="background:' + getColor(from + 1) + '"></i> ' +
-          from + (to ? '&ndash;' + to : '+'));
-        }
-        div.innerHTML = labelspov.join('<br>');
-        return div;
-      };
+    // var pov_legend = L.control({position: 'topleft'});
+    // pov_legend.onAdd = function (map) {
+    //   var div = L.DomUtil.create('div', 'pov_legend'),
+    //   gradespov = [],
+    //   labelspov = [],
+    //   from, to;
+    //   for (var i = 0; i < gradespov.length; i++) {
+    //     from = grades[i];
+    //     to = grades[i + 1];
+    //     labelspov.push(
+    //       '<i style="background:' + getColor(from + 1) + '"></i> ' +
+    //       from + (to ? '&ndash;' + to : '+'));
+    //     }
+    //     div.innerHTML = labelspov.join('<br>');
+    //     return div;
+    //   };
       var pov_legend = '<i style="background-color:#83205c; opacity: 0.6"></i><p><b>400k+</b></p>' +
         '<i style="background-color:#d72046	; opacity: 0.6"></i><p><b>200k-400k</b></p>'+
         '<i style="background-color:#db8445; opacity: 0.6"></i><p><b>50k-200k</b></p>'+
@@ -466,7 +467,6 @@
       //   };
       //   var volunteer_legend = '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036">foodbank</i>' +
       //     '<i class="far fa-flag" style="font-size:25px;color: #a2c036">shelter</i>';
-
       // var vol_legend = '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036">NYS_foodbank</i>';
       // var shelter_legend = '<i class="far fa-flag" style="font-size:25px;color: #a2c036">shelter</i>';
       var tweet_legend = '<i class=""><svg height="16" width="16"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="0" fill="#00ff00" fillOpacity="0.4" /></svg></i><p><b>Tweets</b></p>';
@@ -516,22 +516,6 @@
           },
         }), legend: pov_legend
       },
-
-      // volunteer: {
-      //   layer: L.geoJson.ajax('assets/food.geojson', {
-      //     onEachFeature: function (feature, layer) {
-      //         layer.bindPopup("<h3>food pantry</h3>" + feature.properties.text);
-      //     },
-      //     pointToLayer: function (feature, latlng) {
-      //       if(feature.properties.type == "foodbank"){
-      //         var marker = L.marker(latlng,{icon: food});
-      //       } else {
-      //         var marker = L.marker(latlng, {icon: shelter});
-      //       };
-      //       return marker;
-      //     }
-      //   }), legend: volunteer_legend
-      // },
 
       volunteer: {
         layer: L.geoJson.ajax('assets/food.geojson', {
@@ -630,7 +614,6 @@
               easeLinearity: 0.35,
               gestureHandling: 'cooperative'
             }).setView([40.80312772327861, -74.25052800770425], 2.5);
-
 
             // animated zoom
               map.on('click',
