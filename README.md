@@ -72,8 +72,8 @@ The miniglobe added to the storymap was retrieved from Chris Whong's leaflet exa
 ## :lock_with_ink_pen: Guides for Users
 The **`User Interface`** and **`User Experience`** Designs are two crucial components of a storymap. The User Experience (UX) relates with elements that are used to effectively influence users' experience, perceptions, and easiness in accessing the web map. The UI design  focuses on the appearance, presentation, and interactivity of the web map with user. For these two components, I used the following techniques and codes: <br>
 
-- retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4.png" width='900'><br>
-- zooming in and zooming out the map with accordance to their needs through **zoom control** and flying to areas of concern: Bronx and New York cities through **animated zoom** <br><img src="img/pg8.png" width='900'><br>
+- retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4a.png" width='900'><br>
+- zooming in and zooming out the map with accordance to their needs through **zoom control** and flying to areas of concern: Bronx and New York cities through **animated zoom** <br><img src="img/pg8a.png" width='900'><br>
 - navigating pages through **animated arrow** and returning to the first page by clicking **home icon** on the last page of the storymap<br><img src="img/pg1.png" width='900'><br>
 - having **links** to sources about the history and present time of New York State, and future resilient city that might inspire New York State.<br><img src="img/pg2.png" width='900'><br><br>
 - having **links** to facebook, github, and brief information about the storymap.<br><img src="img/pg3.png" width='900'><br><br>
