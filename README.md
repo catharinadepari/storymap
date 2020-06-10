@@ -96,3 +96,4 @@ This storymap is possible to be developed due to the contributions of following 
 [2] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East <br>
 [3] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
 [4] [Leaflet](https://leafletjs.com/plugins.html) <br>
+[5] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html)
