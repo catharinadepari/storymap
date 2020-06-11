@@ -12,7 +12,7 @@ The aim of this storymap is to represent the strugggles of the people of New Yor
 In the process of creating this storymap, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is public. It is not specified to any particular groups. I used **New York State** as the locus of this storymap because of its position as the **`epicenter of this country's pandemic`**. Thus, users can obtain important insights from the experience of people in New York State in the wake of COVID-19.<br>Among different types of **`GENRES`**  offered in Roth's Taxonomy (2016), I adopt **multimedia experienced genre**  which use *layout, text, images, and graphics hyperlinks* as ways to enforce **systematic narrative**.Below is the sketch of storyline that I created for this storymap.<br>
 
 Below is the sketch of storyline that I created for this storymap.
-<img src="img/s1.png" width='900'><br>
+<img src="img/s1.png" width='50'><br>
 
 
 The 3 narrative elements of this web map include:
