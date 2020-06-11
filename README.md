@@ -5,7 +5,7 @@
 ### :newspaper: Introduction
 The aim of this storymap is to represent the strugggles of the people of New York State in the face of **`COVID-19 pandemic`**, that is complicated with unresolved social-economic inequity. This storymap is inspired by the success of digital technology-based storymaps in mobilizing social power towards a desired change (James, Kitchin and Leszczynski 2018, 26) through storymaps.<br>
 
-> According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes. *Digital Geography** is a set of technologies that go beyond an engagement with an interface, but also involve spatial big data. Due to its social power, one even called the story map as **`human document`**[TeachMideast](https://teachmideast.org/articles/digital-geography-applications/).<br>
+> According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes. *Digital Geography** is a set of technologies that go beyond an engagement with an interface, but also involves spatial big data. Due to social power it has, many like [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/) called story map as **`human document`**<br>
 
 ### :hammer: Storyline
 In the process of creating this storymap, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is all types of audience. I used **New York State** as the locus because of its position as the **`epicenter of this country's pandemic`**. It is hoped that users can gain important insights from the lived experience of people in New York State in the wake of COVID-19.<br>Among different types of **`GENRES`**  offered in Roth's Taxonomy (2016), I adopt **multimedia experienced genre**  which uses *layout, text, images, and graphics hyperlinks* as ways to enforce **systematic narrative**. Below are the sketches and brief descriptions of the map's storyline.<br>
@@ -22,30 +22,30 @@ The **`fifth page`** contains the fourth scene called Poverty. I attempt to link
 
 <img src="img/s3.png" width='600'><br>
 
-The **`seventh page`** is the end of the storymap with 'working together' and 'trusting scientists' suggested by a local ctizen as the resolution of the pandemic and the following man-made disaster.<br>
+The **`seventh page`** is the end of the storymap with 'working together' and 'trusting scientists' suggested by a local citizen as the resolution. In this page, I also included the acknowledgement/credits.<br>
 
 <img src="img/s4.png" width='600'><br>
 
 The 3 narrative elements of this web map include:
 <br>
 1. **Set-Up Act**<br>
-In terms of **`settings`**, the locus of this storymap is **New York State** that comprises 62 counties. The **`key characters`** involved are the citizens of the **New York State** and the **Governor Andrew Cuomo**. The **problem** is the pandemic that disrupts the lives of people in the New York State along with Governor's pause order that  raised public outrage and protests. The **time frame** is the current time where the pandemic and pause order are still taking place.<br>
+In terms of **`settings`**, the locus of this storymap is **New York State** that comprises 62 counties. The **`key characters`** are the citizens of the **New York State** and the **Governor Andrew Cuomo**. The **problem** is the pandemic that disrupts the lives of people in the New York State and was complicated by public outrage due to the Governor's Pause Order. The **time frame** is the current time where the pandemic and pause order are still taking place.<br>
 
 <img src="img/pg5.png" width='900'><br>
 
 2. **Conflict Act**<br>
-The **`key issue`** of the story is the **vulnerability of people in New York State to the pandemic that increases as poverty and violance firearm rates of this state are relatively higher than other states in the U.S**. All factors associated with uncertainty in this state were transferred into thematic spatial maps (i.e., COVID-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in sequential and systematic/linear order. The linearity is aimed at showing the link between the socio-economic factors and its concentration in Bronx and New York cities. <br>
+The **`key issue`** of the story is the **increasing vulnerability of people in New York State to the pandemic due to the high level of poverty and violance firearm rates in this state**. All factors linked to the pandemic were transferred into thematic maps (i.e., COVID-19 case, tweets over pause order, median household income, violance firearm rate, voluntary centers) in a linear order. <br>
 
 <img src="img/pg6.png" width='900'><br>
 
 3. **Resolution Act**<br>
 The **recommendations** offered are: 1) the need of people to embrace the pandemic as a opportunity to innovate, change, and reconsider the value of social cohesion to increase resilience to pandemic; 2) working together and listening to scientists to
-deal with the pandemic as suggested by local residents and shown on the last page of this web map.<br>
+deal with the pandemic as suggested by a local resident and shown on the last page of this storymap.<br>
 
 <img src="img/pg7.png" width='900'><br>
 
 ## :mag_right: Data Sources
-This storymap used data that are compiled from various and reliable resources belong to the U.S. government, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, need to be converted into GeoJson file. Besides that, for attaching icon or markert using *pointToLayer* to map, I added longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I firstly accessed the addresses of those places via google map. <br>
+This storymap used data that are compiled from various resources mainly belong to the U.S. and state's governments, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, need to be converted into GeoJson file. For attaching icon or markert using *pointToLayer* to the map, I added longitude and latitude of the location of each food pantry and homeless shelter. To obtain the location coordinates, I accessed the addresses of those places via google map. For the layers' colors, I utilized A [bivariate choropleth palette benerator](https://jakobzhao.github.io/storymap/assets/color.html). <br>
 
 | Data file | Data Type | Description| Sources |
 | --------- | --------- | ---------- | ------- |
@@ -57,7 +57,6 @@ This storymap used data that are compiled from various and reliable resources be
 | food.geojson | vector | Location of food pantries in Bronx and surrounding in May 2020 with longitude and latitude coordinates | https://www.foodpantries.org/ci/ny-bronx |
 
 <br>
-To enable the **pointToLayer** to be used on spatial maps, the geojson data that I retrieved from many sources, were added with longitude and latitude coordinates. These cordinates were obtained from **`googlemaps.`** For the layers' colors, I utilized A [bivariate choropleth palette benerator](https://jakobzhao.github.io/storymap/assets/color.html).
 
 ## :books: Libraries
 Below is the table that shows the data library of this storymap.
@@ -87,10 +86,10 @@ cartodb_dark: {
 The miniglobe added to the storymap was retrieved from Chris Whong's leaflet example in the github with URL: https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html.
 
 ## :lock_with_ink_pen: Guides for Users
-The **`User Interface`** and **`User Experience`** Designs are two crucial components of a storymap. The User Experience (UX) relates with elements that are used to effectively influence users' experience, perceptions, and easiness in accessing the web map. The UI design  focuses on the appearance, presentation, and interactivity of the web map with user. For these two components, I used the following techniques and codes: <br>
+The **`User Interface`** and **`User Experience`** Designs are two crucial components of a storymap. The User Experience (UX) relates with elements that are used to effectively influence users' experience, perceptions, and easiness in accessing the web map. The UI design  focuses on the appearance, presentation, and interactivity of the storymap with user. Regarding the two components, I used the following techniques : <br>
 - retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4b.png" width='900'><br>
-- zooming in and zooming out the map with accordance to their needs through **zoom control** and flying to areas of concern: Bronx and New York cities through **animated zoom** <br><img src="img/pg8a.png" width='900'><br>
-- navigating pages through **animated arrow** and returning to the first page by clicking **home icon** on the last page of the storymap<br><img src="img/pg1.png" width='900'><br>
+- zooming in and zooming out the map with accordance to their needs through **zoom control** and flying to areas of concern: Bronx and New York cities by clicking anywhere on the map background. Users will experience flyTo and **animated zoom** <br><img src="img/pg8a.png" width='900'><br>
+- navigating pages through **animated arrow** and returning to the first page by clicking **home icon** provided on the last page p<br><img src="img/pg1.png" width='900'><br>
 - having **links** to sources about the history and present time of New York State, and future resilient city that might inspire New York State.<br><img src="img/pg2.png" width='900'><br><br>
 - having **links** to facebook, github, and brief information about the storymap.<br><img src="img/pg3.png" width='900'><br><br>
 
