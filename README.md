@@ -3,29 +3,30 @@
 <img src="img/page_front.png" width='950'> <br>
 ## Resilience Story of New York<br>
 ### :newspaper: Introduction
-According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes.<br>
-The aim of this storymap is to represent the strugggles of the people of New York State in the face of **`COVID-19 pandemic`**, that is complicated with unresolved social-economic inequity. This storymap is inspired by the success of digital technology in mobilizing social power towards a desired change (James, Kitchin and Leszczynski 2018, 26) through storymaps.<br>
+The aim of this storymap is to represent the strugggles of the people of New York State in the face of **`COVID-19 pandemic`**, that is complicated with unresolved social-economic inequity. This storymap is inspired by the success of digital technology-based storymaps in mobilizing social power towards a desired change (James, Kitchin and Leszczynski 2018, 26) through storymaps.<br>
+
+> According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes.
 
 > *Digital Geography** is a set of technologies that go beyond an engagement with an interface, but also involve spatial big data. DUe to its social power, one even called the story map as **`human document`**[TeachMideast](https://teachmideast.org/articles/digital-geography-applications/).<br>
 
 ### :hammer: Storyline
-In the process of creating this storymap, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is public. It is not specified to any particular groups. I used **New York State** as the locus of this storymap because of its position as the **`epicenter of this country's pandemic`**. Thus, users can obtain important insights from the experience of people in New York State in the wake of COVID-19.<br>Among different types of **`GENRES`**  offered in Roth's Taxonomy (2016), I adopt **multimedia experienced genre**  which use *layout, text, images, and graphics hyperlinks* as ways to enforce **systematic narrative**.Below is the sketch of storyline that I created for this storymap.<br>
+In the process of creating this storymap, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is all types of audience. I used **New York State** as the locus because of its position as the **`epicenter of this country's pandemic`**. It is hoped that users can gain important insights from the lived experience of people in New York State in the wake of COVID-19.<br>Among different types of **`GENRES`**  offered in Roth's Taxonomy (2016), I adopt **multimedia experienced genre**  which uses *layout, text, images, and graphics hyperlinks* as ways to enforce **systematic narrative**. Below are the sketches and brief descriptions of the map's storyline.<br>
 
-The **`first page`** contains a video with links all aspects related to New York State (i.e., history, present conditions, and future resilient city in New York State, trend of COVID-19 cases and NY State Government's official website, and social media. The **`second page`** contains the first scene of the story, that is the introduction of the COVID-19 issue in May 2020 in this state. <br>
+The **`first page`** contains a video of New York City during pandemic which I obtained from [The New Yorkers](https://www.youtube.com/watch?v=rYTNO_WtNys) youtube. To dramatize, I transformed the nuance of the video into a vintage (old). On this page, users can also access links related to New York State (i.e., history, present conditions, and future resilient city ), real-time data of COVID-19 case, NY State Government's official website, and social media. The **`second page`** contains the first scene of the story, that is the introduction of the COVID-19 issue in May 2020 in this state. <br>
 
-<img src="img/s1.png" width='500'><br>
+<img src="img/s1.png" width='600'><br>
 
-The **`third page`** contains the second scene of the story entitled Pause Order. It explains the pause order that invited different responses of people in the U.S. especially in this state. The **`fourth page`** contains the third scene of the story called outrage. This scene specifically explains the protests throughout U.S. which unfortunately led to violence and anarchy. I associated the incidents with the violence firearm rate data in 2017 of the U.S. <br>
+The **`third page`** contains the second scene of the story entitled Pause Orderthat invited different responses of people in the U.S. The **`fourth page`** contains the third scene of the story called outrage. This scene specifically explains the protests throughout U.S. which unfortunately led to violence and anarchy. I associated the incidents with the violence firearm rate data in 2017 at country level. <br>
 
-<img src="img/s2.png" width='500'><br>
+<img src="img/s2.png" width='600'><br>
 
-The **`fifth page`** contains the fourth scene called Poverty. I attempt to link the data of violence rate with poverty level. To represent poverty, I used median household income level data in 2015 at state level. The **`sixth page`** contains the last scene called volunteer where heroism acts increase during the pandemic. Among many evidences of this, I used food pantry and homeless shelter to demonstrate the good value that people learn from this challeng.<br>.
+The **`fifth page`** contains the fourth scene called Poverty. I attempt to link the data of violence rate with poverty level. To represent poverty, I used median household income level data in 2015 at state level. The **`sixth page`** contains the last scene called volunteer where heroism acts increase during the pandemic. Among many evidences of this, I used food pantry and homeless shelter to demonstrate the good value that people learn from this challenge.<br>.
 
-<img src="img/s3.png" width='500'><br>
+<img src="img/s3.png" width='600'><br>
 
-Below is the sketch of storyline that I created for this storymap.<br>
+The **`seventh page`** is the end of the storymap with 'working together' and 'trusting scientists' suggested by a local ctizen as the resolution of the pandemic and the following man-made disaster.<br>
 
-<img src="img/s4.png" width='500'><br>
+<img src="img/s4.png" width='600'><br>
 
 The 3 narrative elements of this web map include:
 <br>
