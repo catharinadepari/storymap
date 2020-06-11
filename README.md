@@ -11,9 +11,17 @@ The aim of this storymap is to represent the strugggles of the people of New Yor
 ### :hammer: Storyline
 In the process of creating this storymap, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is public. It is not specified to any particular groups. I used **New York State** as the locus of this storymap because of its position as the **`epicenter of this country's pandemic`**. Thus, users can obtain important insights from the experience of people in New York State in the wake of COVID-19.<br>Among different types of **`GENRES`**  offered in Roth's Taxonomy (2016), I adopt **multimedia experienced genre**  which use *layout, text, images, and graphics hyperlinks* as ways to enforce **systematic narrative**.Below is the sketch of storyline that I created for this storymap.<br>
 
-Below is the sketch of storyline that I created for this storymap.
-<img src="img/s1.png" width='50'><br>
+The **`first page`** contains a video with links all aspects related to New York State (i.e., history, present conditions, and future resilient city in New York State, trend of COVID-19 cases and NY State Government's official website, and social media. The **`second page`** contains the first scene of the story, that is the introduction of the COVID-19 issue in May 2020 in this state. <br>
+<img src="img/s1.png" width='500'><br>
 
+The **`third page`** contains the second scene of the story entitled Pause Order. It explains the pause order that invited different responses of people in the U.S. especially in this state. The **`fourth page`** contains the third scene of the story called outrage. This scene specifically explains the protests throughout U.S. which unfortunately led to violence and anarchy. I associated the incidents with the violence firearm rate data in 2017 of the U.S. <br>
+<img src="img/s2.png" width='500'><br>
+
+The **`fifth page`** contains the fourth scene called Poverty. I attempt to link the data of violence rate with poverty level. To represent poverty, I used median household income level data in 2015 at state level. The **`sixth page`** contains the last scene called volunteer where heroism acts increase during the pandemic. Among many evidences of this, I used food pantry and homeless shelter to demonstrate the good value that people learn from this challeng.<br>.<br>
+<img src="img/s3.png" width='500'><br>
+
+Below is the sketch of storyline that I created for this storymap.<br>
+<img src="img/s4.png" width='500'><br>
 
 The 3 narrative elements of this web map include:
 <br>
