@@ -3,14 +3,17 @@
 <img src="img/page_front.png" width='950'> <br>
 ## Resilience Story of New York<br>
 ### :newspaper: Introduction
-According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes. In the context of this storymap, the resilience is the capacity of New York State citizens to withstand a disturbance including a pandemic.<br>
-The aim of this storymap is to represent the strugggles of the New York State citizens in dealing with **`the COVID-19 pandemic`** which is complicated by some economic and social facts that had long interplayed in the U.S. history.<br>
-This storymap evidences the potential of digital technology in explaining a social phenomenon in a specific geographic area and to mobilze social power towards a desired change (James, Kitchin and Leszczynski 2018, 26).<br>
+According to notable scholar [Holling](https://core.ac.uk/download/pdf/52941869.pdf), **`resilience`** is the persistence of relationships within a system. It is a measure of the ability of the systems to absorb changes.<br>
+The aim of this storymap is to represent the strugggles of the people of New York State in the face of **`COVID-19 pandemic`**, that is complicated with unresolved social-economic inequity. This storymap is inspired by the success of digital technology in mobilizing social power towards a desired change (James, Kitchin and Leszczynski 2018, 26) through storymaps.<br>
 
 > *Digital Geography** is a set of technologies that go beyond an engagement with an interface, but also involve spatial big data. DUe to its social power, one even called the story map as **`human document`**[TeachMideast](https://teachmideast.org/articles/digital-geography-applications/).<br>
 
 ### :hammer: Storyline
-In the web map process, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is public, in other words, it is not specified to particular groups. I used **New York State** as the locus of this story to allow me to explain the connections between different factors (social and economy) from country to city level that complicate the resilience story of New York State.<br>Among different types of **`GENRES`**  in the Roth's Taxonomy (2016), I adopted **multimedia experienced genre**  which use *layout* and *text, images, and graphics hyperlinks* to enforce **linearity**.<br>
+In the process of creating this storymap, I primarily developed the storyline by referring to the compeling work of [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4). The audience of the storymap is public. It is not specified to any particular groups. I used **New York State** as the locus of this storymap because of its position as the **`epicenter of this country's pandemic`**. Thus, users can obtain important insights from the experience of people in New York State in the wake of COVID-19.<br>Among different types of **`GENRES`**  offered in Roth's Taxonomy (2016), I adopt **multimedia experienced genre**  which use *layout, text, images, and graphics hyperlinks* as ways to enforce **systematic narrative**.Below is the sketch of storyline that I created for this storymap.<br>
+
+Below is the sketch of storyline that I created for this storymap.
+<img src="img/s1.png" width='900'><br>
+
 
 The 3 narrative elements of this web map include:
 <br>
@@ -35,12 +38,15 @@ This storymap used data that are compiled from various and reliable resources be
 
 | Data file | Data Type | Description| Sources |
 | --------- | --------- | ---------- | ------- |
-| uscases.geojson | vector | Number of COVID-19 cases and tests run in the U.S. | https://github.com/datasets/covid-19/tree/master/data |
-| tweets.geojson | vector | Distribution of tweets corresponding to **pause order**. Data were gathered by using tweets crawling on May 20, 2020 | Tweeter |
-| nys_viol_rate.geojson | vector | Index, Violent, property and firearm rates in NY states | https://catalog.data.gov/dataset/index-violent-property-and-firearm-rates-by-county-beginning-1990/resource/d1e392ad-8377-4ca7-8b36-7c43bb275afc |
+| uscases.geojson | vector | Number of COVID-19 cases and tests run in the U.S. based on CDC's report on May 13, 2020 | https://github.com/datasets/covid-19/tree/master/data |
+| tweets.geojson | vector | Distribution of tweets corresponding to **pause order**. Data were gathered by using tweets crawling on June 5, 2020 | Tweeter |
+| nys_viol_rate.geojson | vector | Index, Violent, property and firearm rates in NY states on November 2017| https://catalog.data.gov/dataset/index-violent-property-and-firearm-rates-by-county-beginning-1990/resource/d1e392ad-8377-4ca7-8b36-7c43bb275afc |
 | nyspvt.geojson | vector | Median household income of New York State in 2015 with longitude and latitude coordinates | https://data.ny.gov/Energy-Environment/NYSERDA-Low-to-Moderate-Income-New-York-State-Cens/bui8-bb6g/data |
-| shelter.geojson | vector | Locations of homeless shelters in Bronx in 2020 with longitude and latitude coordinates | https://www.homelessshelterdirectory.org/cgi-bin/id/city.cgi?city=bronx&state=NY |
-| food.geojson | vector | location of food pantries in Bronx and surrounding in May 2020 with longitude and latitude coordinates | https://www.foodpantries.org/ci/ny-bronx |
+| shelter.geojson | vector | Locations of homeless shelters in Bronx in May 2020 with longitude and latitude coordinates | https://www.homelessshelterdirectory.org/cgi-bin/id/city.cgi?city=bronx&state=NY |
+| food.geojson | vector | Location of food pantries in Bronx and surrounding in May 2020 with longitude and latitude coordinates | https://www.foodpantries.org/ci/ny-bronx |
+
+<br>
+To enable the **pointToLayer** to be used on spatial maps, the geojson data that I retrieved from many sources, were added with longitude and latitude coordinates. These cordinates were obtained from **`googlemaps.`** For the layers' colors, I utilized A [bivariate choropleth palette benerator](https://jakobzhao.github.io/storymap/assets/color.html).
 
 ## :books: Libraries
 Below is the table that shows the data library of this storymap.
@@ -92,8 +98,10 @@ This storymap is possible to be developed due to the contributions of following 
 - Professor Bo Zhao instructor of GEOG 458 coursework at the University of Washington, Seattle for advisory and guidance that allows the improvement of this storymap. <br>
 
 ### :link: References
-[1] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
-[2] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East <br>
-[3] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
-[4] [Leaflet](https://leafletjs.com/plugins.html) <br>
-[5] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html)
+[1] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html)<br>
+[2] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
+[3] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/assets/color.html)<br>
+[4] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/examples/2.5/styles.html)<br>
+[5] [Leaflet](https://leafletjs.com/plugins.html)<br>
+[6] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
+[7] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East <br>
