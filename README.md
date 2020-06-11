@@ -111,10 +111,10 @@ This storymap is possible to be developed due to the contributions of following 
 - Professor Bo Zhao instructor of GEOG 458 coursework at the University of Washington, Seattle for advisory and guidance that allows the improvement of this storymap. <br>
 
 ### :link: References
-[1] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html)<br>
+[1] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html), https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html<br>
 [2] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
-[3] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/assets/color.html)<br>
-[4] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/examples/2.5/styles.html)<br>
-[5] [Leaflet](https://leafletjs.com/plugins.html)<br>
+[3] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/assets/color.html), https://jakobzhao.github.io/storymap/assets/color.htm <br>
+[4] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/examples/2.5/styles.html), https://jakobzhao.github.io/storymap/examples/2.5/styles.html<br>
+[5] [Leaflet](https://leafletjs.com/plugins.html), https://leafletjs.com/plugins.html<br>
 [6] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
 [7] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East <br>
