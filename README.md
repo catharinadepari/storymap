@@ -85,6 +85,50 @@ cartodb_dark: {
 
 The miniglobe added to the storymap was retrieved from Chris Whong's leaflet example in the github with URL: https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html.
 
+### :lock_with_ink_pen: Special Codes
+There are some important elements and codes that I used in this storymap to enhance users' experience. These elements include: <br>
+
+*First*, to animate the zoom in with fly to, I used the following element: <br>
+
+```js
+map.on('click',
+function(e){
+  var coord = e.latlng.toString().split(',');
+  var lat = coord[0].split('(');
+  var lng = coord[1].split(')');
+  console.log("You clicked the map at latitude: " + lat[1] + " and longitude:" + lng[0]);
+
+map.flyTo([40.8448, -73.8648], 12, {
+  animate: true,
+  duration: 2 //in seconds
+});
+});
+```
+<br>
+
+*Second*, to create glyphicon with glowing effect, I used the pointToLayer element with details: <br>
+
+```js
+pointToLayer: function (feature, latlng) {
+  return L.marker(latlng, {icon: L.divIcon({
+    className: 'glyphicon glyphicon-one-fine-smaller-dot glow-effect'})
+  });
+```
+<br>
+
+*Third*,  to animate text on the acknowledgement page, I used **`<marquee>`** element with the following details: <br>
+
+```js
+<marquee class="marq" bgcolor="" direction="up" loop="" height="500px" width= "1000px" hspace="100px" vspace="200px" truespeed="10">
+  <h4 style="font-size: 36px; color: orange;">Acknowledgement
+    <ul style="font-size: 24px; color: lightyellow;">
+      <li></li>
+    </ul>
+  </h4>
+</marquee>
+```
+<br>
+
 ## :lock_with_ink_pen: Guides for Users
 The **`User Interface`** and **`User Experience`** Designs are two crucial components of a storymap. The User Experience (UX) relates with elements that are used to effectively influence users' experience, perceptions, and easiness in accessing the web map. The UI design  focuses on the appearance, presentation, and interactivity of the storymap with user. Regarding the two components, I used the following techniques : <br>
 - retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4.png" width='900'><br>
@@ -93,25 +137,27 @@ The **`User Interface`** and **`User Experience`** Designs are two crucial compo
 - having **links** to sources about the history and present time of New York State, and future resilient city that might inspire New York State.<br><img src="img/pg2.png" width='900'><br><br>
 - having **links** to facebook, github, and brief information about the storymap.<br><img src="img/pg3.png" width='900'><br><br>
 
-## :flags: Credits/Acknowledgement
+## :flags: Acknowledgement
 This storymap is possible to be developed due to the contributions of following institutons, organizations, and individuals:
 - New York State Government for its open source database that allows the storymap to be developed
 - U.S. Center of Disease Control and Prevention for providing recent data of COVID-19 cases in the U.S.
-- Taylor DesOrmeau for article *What’s the difference between Michigan’s stay-at-home order and state of emergency?* in the [mlive.com](https://www.mlive.com/public-interest/2020/04/whats-the-difference-between-michigans-stay-at-home-order-and-state-of-emergency.html)
--  Lazaro Gamio for article *State By State: Comparing Coronavirus Death Rates Across U.S.* in the [New York Times](https://www.nytimes.com/interactive/2020/04/22/us/coronavirus-death-rates.html)
--  Orion Rummier and Rebecca Falconer for article *In photos: Groups protest coronavirus lockdowns across the U.S.* in the [Axios](https://www.axios.com/coronavirus-protest-social-distancing-1bc7fb5a-b94c-471e-adf2-c50bfad4f242.html)
--  Robin Abcarian for article *Column: Gun-toting Republicans ignoring quarantine orders? Yes, even coronavirus has become part of the culture wars* in the [Los Angeles Times](https://www.latimes.com/opinion/story/2020-04-17/column-gun-toting-republicans-ignoring-quarantine-orders-yes-even-coronavirus-has-become-part-of-the-culture-wars)
--  Julianne Malveaux for article *What Others Are Saying Homelesness Crisis: We are Better than This* in the [New Orleans Tribune](https://theneworleanstribune.com/what-others-are-saying-homelessness-crisis-we-are-better-than-this/)
--  Foodpantries.org for [foodbank list](https://www.foodpantries.org/ci/ny-bronx) in Bronx
--  Homelessshelterdirectory.org for [homeless shelter](https://www.homelessshelterdirectory.org/cgi-bin/id/shelter.cgi?shelter=20310) in Bronx
--  The NewYorker for the inspiring [video](https://www.youtube.com/watch?v=rYTNO_WtNys) *The Streets of New York City Under Quarantine)*
-- Professor Bo Zhao instructor of GEOG 458 coursework at the University of Washington, Seattle for advisory and guidance that allows the improvement of this storymap. <br>
+- Foodpantries.org for [foodbank list](https://www.foodpantries.org/ci/ny-bronx) in City of Bronx
+- Homelessshelterdirectory.org for [homeless shelter](https://www.homelessshelterdirectory.org/cgi-bin/id/shelter.cgi?shelter=20310) in City of Bronx
+- Professor Bo Zhao instructor of GEOG 458 coursework at the University of Washington, Seattle for advisory and guidance that allows the improvement of this storymap.<br>
 
 ### :link: References
 [1] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html), https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html<br>
-[2] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
-[3] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/assets/color.html), https://jakobzhao.github.io/storymap/assets/color.htm <br>
-[4] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/examples/2.5/styles.html), https://jakobzhao.github.io/storymap/examples/2.5/styles.html<br>
-[5] [Leaflet](https://leafletjs.com/plugins.html), https://leafletjs.com/plugins.html<br>
-[6] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
-[7] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East <br>
+[2] [Geeks for Geeks[(https://www.geeksforgeeks.org/html-marquee-tag/) for the animated credits<br>
+[3] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
+[4] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/assets/color.html)<br>
+[5] [Jacob Bo Zhao](https://jakobzhao.github.io/storymap/examples/2.5/styles.html), https://jakobzhao.github.io/storymap/examples/2.5/styles.html<br>
+[6] [Julianne Malveaux](https://theneworleanstribune.com/what-others-are-saying-homelessness-crisis-we-are-better-than-this/), (2020), *What Others Are Saying Homelesness Crisis: We are Better than This*, New Orleans Tribune<br>
+[7] [Lazaro Gamio](https://www.nytimes.com/interactive/2020/04/22/us/coronavirus-death-rates.html), (2020), *State By State: Comparing Coronavirus Death Rates Across U.S.*, New York Times<br>
+[8] [Leaflet](https://leafletjs.com/plugins.html), https://leafletjs.com/plugins.html<br>
+[9] [Orion Rummier and Rebecca Falconer](https://www.axios.com/coronavirus-protest-social-distancing-1bc7fb5a-b94c-471e-adf2-c50bfad4f242.html), (2020), *In photos: Groups protest coronavirus lockdowns across the U.S.*<br>
+[10] [Robin Abcarian](https://www.latimes.com/opinion/story/2020-04-17/column-gun-toting-republicans-ignoring-quarantine-orders-yes-even-coronavirus-has-become-part-of-the-culture-wars), (2020), *Column: Gun-toting Republicans ignoring quarantine orders? Yes, even coronavirus has become part of the culture wars*, Los Angeles Times<br>
+[11] [Song, Z.](https://link.springer.com/book/10.1007%2F978-3-030-04028-4), (2017), *Map-Based Visual Storytelling: An Assessment of Emerging Genres and Tropes*, University of Wisconsin-Madison<br>
+[12] [Taylor DesOrmeau](https://www.mlive.com/public-interest/2020/04/whats-the-difference-between-michigans-stay-at-home-order-and-state-of-emergency.html), (2020), *What’s the difference between Michigan’s stay-at-home order and state of emergency?*<br>
+[13] [TeachMideast](https://teachmideast.org/articles/digital-geography-applications/), (2020), *TeachMideast*, Middle East<br>
+[14] [TheNewYorker](https://www.youtube.com/watch?v=rYTNO_WtNys), (2020), *The Streets of New York City Under Quarantine*<br>
+[15] [Menny](https://mennyfox55.tumblr.com/post/152449515953/dormir), (2016), https://mennyfox55.tumblr.com/post/152449515953/dormir
