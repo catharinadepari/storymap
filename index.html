@@ -509,28 +509,7 @@
       var photo1 = '<img src="img/food.png" width="55px" height="55px">';
       var photo2 = '<img src="img/shelter.png" width="55px" height="55px">';
 
-      // create legend for icons
-      // Set pov_legend
-      // var volunteer_legend = L.control({position: 'topleft'});
-      // volunteer_legend.onAdd = function (map) {
-      //   var div = L.DomUtil.create('div', 'volunteer_legend'),
-      //   gradespov = [],
-      //   labelspov = [],
-      //   from, to;
-      //   for (var i = 0; i < gradespov.length; i++) {
-      //     from = grades[i];
-      //     to = grades[i + 1];
-      //     labelsvolunteer.push(
-      //       '<i style="background:' + getColor(from + 1) + '"></i> ' +
-      //       from + (to ? '&ndash;' + to : '+'));
-      //     }
-      //     div.innerHTML = labelsvolunteer.join('<br>');
-      //     return div;
-      //   };
-      //   var volunteer_legend = '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036">foodbank</i>' +
-      //     '<i class="far fa-flag" style="font-size:25px;color: #a2c036">shelter</i>';
-      // var vol_legend = '<i class="fas fa-map-pin" style="font-size:25px;color: #a2c036">NYS_foodbank</i>';
-      // var shelter_legend = '<i class="far fa-flag" style="font-size:25px;color: #a2c036">shelter</i>';
+      // create tweet legend
       var tweet_legend = '<i class=""><svg height="16" width="16"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="0" fill="#00ff00" fillOpacity="0.4" /></svg></i><p><b>Tweets</b></p>';
 
     // create layers
@@ -590,7 +569,7 @@
                 iconSize: [30, 30],
                 className: 'myDivIcon'
               })
-            }); legend: volunteer_legend
+            });
           },
         }),
       },
@@ -606,7 +585,7 @@
             iconSize: [30, 30],
             className: 'myDivIcon'
           })
-        }); legend: shelter_legend
+        });
       },
     }),
   },
