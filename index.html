@@ -224,8 +224,8 @@
                           <li>Professor Bo Zhao, University of Washington, Seattle</li>
                         </ul>
                       </h4>
-                      <h4 style="font-size: 36px; color: orange;">References
-                        <ul style="font-size: 24px; color: lightyellow;">
+                      <h4 style="font-size: 36px; color:orange;">References
+                        <ul style="font-size: 24px; color:lightyellow;">
                           <li>Chris Whong, https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html</li>
                           <li>Geeks for Geeks, https://www.geeksforgeeks.org/html-marquee-tag/</li>
                           <li>Holling, C.S., (1973), <i>"Resilience and Stability of Ecological System"</i></li>
@@ -498,11 +498,16 @@
         iconSize: [30, 30],
         className: 'myDivIcon'
       });
+
       var shelter = L.divIcon({
         html: '<i class="far fa-flag" style="font-size:25px;color: #a2c036"></i>',
         iconSize: [30, 30],
         className: 'myDivIcon'
       });
+
+      // Images in the popups of volunteer layer
+      var photo1 = '<img src="img/food.png" width="55px" height="55px">';
+      var photo2 = '<img src="img/shelter.png" width="55px" height="55px">';
 
       // create legend for icons
       // Set pov_legend
@@ -568,7 +573,7 @@
       layer: L.geoJson.ajax('assets/nyspvt.geojson', {
         style: pov_style,
         onEachFeature: function (feature, layer) {
-          layer.bindPopup("<p><b>County</p></b>" + feature.properties.County + " " +"<p><b>Income</p></b>" + feature.properties.newmed_medinco,
+          layer.bindPopup("<p><b>County</p></b>" + feature.properties.County + " " +"<p><b>Median Household Income</p></b>" + feature.properties.newmed_medinco,
             {sticky: true, className: "feature-label", permanent: false, direction: "center"});
           },
         }), legend: pov_legend
@@ -577,7 +582,7 @@
       volunteer: {
         layer: L.geoJson.ajax('assets/food.geojson', {
           onEachFeature: function (feature, layer) {
-              layer.bindPopup("<h3>food pantry</h3>" + feature.properties.text);
+              layer.bindPopup("<center><h4>foodbank</h4>" + photo1 + "<h5>address</h5>" + feature.properties.text);
           },
           pointToLayer: function (feature, latlng) {
               return L.marker(latlng, {icon: L.divIcon({
@@ -593,7 +598,7 @@
     shelter: {
       layer: L.geoJson.ajax('assets/shelter.geojson', {
         onEachFeature: function (feature, layer) {
-            layer.bindPopup("<h3>shelter</h3>" + feature.properties.text);
+            layer.bindPopup("<center><h4>shelter</h4>" + photo2 + "<h5>address</h5>" + feature.properties.text);
         },
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, {icon: L.divIcon({
@@ -628,13 +633,12 @@
     // Bronx: 40.8448, -73.8648
     // NYstate: 43.00035 -75.4999
     // USA: 37.6 -95.665
-
     // Scenes
     var scenes = {
         overview: {lat:37.6, lng: -95.665, zoom: 7, name: 'overview', layers: []},
-        cases: {lat:37.6, lng: -95.665, zoom: 3.8, name: 'cases', layers: [layers.cases]}, //cases of covid, scale: US
-        order: {lat:37.6, lng: -95.665, zoom: 3.8, name: 'order', layers: [layers.order]}, //tweets scale: NYS
-        outrage: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'outrage', layers: [layers.outrage]}, // protests, USA
+        cases: {lat:37.6, lng: -95.665, zoom: 3.75, name: 'cases', layers: [layers.cases]}, //cases of covid, scale: US
+        order: {lat:37.6, lng: -95.665, zoom: 3.75, name: 'order', layers: [layers.order]}, //tweets scale: US
+        outrage: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'outrage', layers: [layers.outrage]}, // protests, scale: USA
         poverty: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'poverty', layers: [layers.poverty]}, // income level, scale : NYS
         volunteer: {lat:43.00035, lng: -75.4999, zoom: 6.5, name: 'volunteer', layers: [layers.volunteer, layers.shelter, layers.poverty]}, // food, scale: Bronx, NYC
         end: {lat:40.8448, lng: -73.8648, zoom: 4, name: 'end'},
