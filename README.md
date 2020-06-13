@@ -85,7 +85,7 @@ cartodb_dark: {
 
 The miniglobe added to the storymap was retrieved from Chris Whong's leaflet example in the github with URL: https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html.
 
-### :lock_with_ink_pen: Special Codes
+## :lock_with_ink_pen: Special Codes
 There are some important elements and codes that I used in this storymap to enhance users' experience. These elements include: <br>
 
 *First*, to animate the zoom in with fly to, I used the following element: <br>
@@ -147,7 +147,7 @@ This storymap is possible to be developed due to the contributions of following 
 - Homelessshelterdirectory.org for [homeless shelter](https://www.homelessshelterdirectory.org/cgi-bin/id/shelter.cgi?shelter=20310) in City of Bronx
 - Professor Bo Zhao instructor of GEOG 458 coursework at the University of Washington, Seattle for advisory and guidance that allows the improvement of this storymap.<br>
 
-### :link: References
+## :link: References
 [1] [Chris Whong](https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html), https://github.com/chriswhong/leaflet-globeminimap/blob/master/example/index.html<br>
 [2] [Geeks for Geeks[(https://www.geeksforgeeks.org/html-marquee-tag/) for the animated credits<br>
 [3] [Holling, C.S.](https://core.ac.uk/download/pdf/52941869.pdf), (1973), *Resilience and Stability of Ecological System*<br>
