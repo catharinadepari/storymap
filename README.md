@@ -135,7 +135,7 @@ The **`User Interface`** and **`User Experience`** Designs are two crucial compo
 - retrieving detailed information from **popup** that appears as users click over specific state<br><img src="img/pg4.png" width='900'><br>
 - zooming in and zooming out the map with accordance to their needs through **zoom control** and flying to areas of concern: Bronx and New York cities by clicking anywhere on the map background. Users will experience flyTo and **animated zoom** <br><img src="img/pg8a.png" width='900'><br>
 - navigating pages through **animated arrow** and returning to the first page through **home icon** on the last page p<br><img src="img/pg1.png" width='900'><br>
-- having **links** to sources about the history and present time of New York State, and future resilient city.<br><img src="img/pg2.png" width='900'><br><
+- having **links** to sources about the history and present time of New York State, and future resilient city.<br><img src="img/pg2.png" width='900'><br>
 - having **links** to facebook, github, and brief information about the storymap.<br><img src="img/pg3.png" width='900'><br>
 
 
