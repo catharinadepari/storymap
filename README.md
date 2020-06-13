@@ -18,11 +18,11 @@ The **`third page`** contains the second scene of the story entitled Pause Order
 
 <img src="img/s2.jpg" width='600'><br>
 
-The **`fifth page`** contains the fourth scene called Poverty. I linked the violence rate with poverty level. To represent poverty, I used median household income level data in 2015 at state level. The **`sixth page`** contains the last scene called volunteer where heroism acts increase during the pandemic. Among many evidences on this topic, food pantry and homeless shelter were used to demonstrate the good value that rose from this challenge.<br>.
+The **`fifth page`** contains the fourth scene called Poverty. I linked the violence rate with poverty level. To represent poverty, I used median household income level data in 2015 at state level. The **`sixth page`** contains the last scene called volunteer where heroism acts increase during the pandemic. Among many evidences on this topic, food pantry and homeless shelter were used to demonstrate the good value that rose from this challenge.<br>
 
 <img src="img/s3.jpg" width='600'><br>
 
-The **`seventh page`** is the seventh of the storymap with 'working together' and 'trusting scientists' suggested by a local citizen as the resolution. In this page, I also included the acknowledgement/credits. Acknowledgment and references were provided on the last page. <br>
+The **`seventh page`** contains the conflict's resolutions-'working together' and 'trusting scientists'-suggested by a local citizen. The storymap is closed with lists of acknowledgement and references using vertical animated text. <br>
 
 <img src="img/s4.jpg" width='600'><br>
 
@@ -40,17 +40,17 @@ The **`key issue`** of the story is the increasing vulnerability of people in Ne
 
 3. **Resolution Act**<br>
 The **`recommendations`** offered are: 1) the need of people to embrace the pandemic as a opportunity to innovate, change, and reconsider the value of social cohesion to increase resilience to pandemic; 2) working together and listening to scientists to
-deal with the pandemic as suggested by a local resident and shown on the last page of this storymap.<br>
+deal with the pandemic as suggested by a local resident and shown on the seventh page of this storymap.<br>
 
 <img src="img/pg7.png" width='900'><br>
 
 ## :mag_right: Data Sources
-This storymap used data that are compiled from various resources mainly belong to the U.S. and state's governments, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, need to be converted into GeoJson file. For *pointToLayer* use, I added longitude and latitude of the location of each food pantry and homeless shelter into each Goejson file. To obtain the location coordinates, I accessed the addresses of those places via google map. For the layers' colors, I utilized [bivariate choropleth palette benerator](https://jakobzhao.github.io/storymap/assets/color.html). <br>
+This storymap used data that are compiled from various resources mainly belong to the U.S. and state's governments, electronic mass media, organization's websites, and twitter. For creating spatial maps, most of these data, need to be converted into GeoJson file. For *pointToLayer* use, I added longitude and latitude of the location of each food pantry and homeless shelter into Geojson files. To obtain the location coordinates, I accessed the addresses of those places via google map. For the layers' colors, I utilized [bivariate choropleth palette benerator](https://jakobzhao.github.io/storymap/assets/color.html). <br>
 
 | Data file | Data Type | Description| Sources |
 | --------- | --------- | ---------- | ------- |
 | uscases.geojson | vector | Number of COVID-19 cases and tests run in the U.S. based on CDC's report on May 13, 2020 | https://github.com/datasets/covid-19/tree/master/data |
-| tweets.geojson | vector | Distribution of tweets corresponding to **pause order**. Data were gathered by using tweets crawling on June 5, 2020 | Tweeter |
+| tweets.geojson | vector | Distribution of tweets corresponding to **pause order**. Data were gathered by using tweets crawling on June 5, 2020 | Tweeter Inc. |
 | nys_viol_rate.geojson | vector | Index, Violent, property and firearm rates in NY states on November 2017| https://catalog.data.gov/dataset/index-violent-property-and-firearm-rates-by-county-beginning-1990/resource/d1e392ad-8377-4ca7-8b36-7c43bb275afc |
 | nyspvt.geojson | vector | Median household income of New York State in 2015 with longitude and latitude coordinates | https://data.ny.gov/Energy-Environment/NYSERDA-Low-to-Moderate-Income-New-York-State-Cens/bui8-bb6g/data |
 | shelter.geojson | vector | Locations of homeless shelters in Bronx in May 2020 with longitude and latitude coordinates | https://www.homelessshelterdirectory.org/cgi-bin/id/city.cgi?city=bronx&state=NY |
